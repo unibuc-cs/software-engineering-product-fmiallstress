@@ -6,26 +6,25 @@
 
 ### 1. The list of initial project requirements:
     
-[x] Enter app: As a user, I should be able sign up or to securely log in to the platform using my email and password and log out.
+- [x] Enter app: As a user, I should be able sign up or to securely log in to the platform using my email and password and log out.
 
-[ ] Dashboard: As a user, I should have access to my personalized dashboard, where I can view my cryptocurrency holdings, portfolio performance metrics, and recent transactions.
+- [ ] Dashboard: As a user, I should have access to my personalized dashboard, where I can view my cryptocurrency holdings, portfolio performance metrics, and recent transactions.
 
-[x] Real-time data: The platform should fetch real-time market data from cryptocurrency exchanges and display it on the dashboard, including current prices and volume for selected cryptocurrencies.
+- [x] Real-time data: The platform should fetch real-time market data from cryptocurrency exchanges and display it on the dashboard, including current prices and volume for selected cryptocurrencies.
 
-[ ] Banking system: As a user, I should be able to deposit and withdraw money from balance.
+- [ ] Banking system: As a user, I should be able to deposit and withdraw money from balance.
 
-[x] ChatGPT: As a user, I should be able to request informations from ChatGPT API regarding predictions of a chosen currency.
+- [x] ChatGPT: As a user, I should be able to request informations from ChatGPT API regarding predictions of a chosen currency.
 
-[ ] Commission fee: As a user, there will be a commission fee applied when withdrawing and depositing money from my account.
+- [ ] Commission fee: As a user, there will be a commission fee applied when withdrawing and depositing money from my account.
 
+- [x] Responsiveness: As a user, I want to use a web application that is responsive and adapts to different screen sizes So that I can access the application seamlessly from any device.
 
-[x] Responsiveness: As a user, I want to use a web application that is responsive and adapts to different screen sizes So that I can access the application seamlessly from any device.
+- [x] Clean interface: As a user,I want the frontend to have an appealing design and intuitive user interface, So that I can easily navigate the application and have a pleasant experience while interacting with it.
 
-[x] Clean interface: As a user,I want the frontend to have an appealing design and intuitive user interface, So that I can easily navigate the application and have a pleasant experience while interacting with it.
+- [x] Quick render: As a user, I want the application to respond rapidly to my requests for data retrieval, analysis, and transactions, So that I can make timely decisions and take actions without experiencing delays or interruptions.
 
-[x] Quick render: As a user, I want the application to respond rapidly to my requests for data retrieval, analysis, and transactions, So that I can make timely decisions and take actions without experiencing delays or interruptions.
-
-[x] Coins info: As a user, I want to see informations about crypto currencies of my interest, such as graphs of price fluctuation 
+- [x] Coins info: As a user, I want to see informations about crypto currencies of my interest, such as graphs of price fluctuation 
 
 #### Unachieved or incomplete User Stories:
 - Dashobard:
