@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1399e978-286e-42d8-beb0-b3353908be61" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Backend/.vs/test_binance_api/FileContentIndex/09038f93-1319-4cdf-b2b9-d3ea9a130177.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.vs/test_binance_api/FileContentIndex/1af9d229-4e4e-494d-a547-6ae4b52094e3.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.vs/test_binance_api/FileContentIndex/54d2cefd-58df-4a30-ae1d-bb9a01b4789f.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.vs/test_binance_api/FileContentIndex/562294f7-317c-4e55-ae65-bee2661ebc1b.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.vs/test_binance_api/FileContentIndex/5dfd62fd-2f8a-43bc-bdc4-624d6b7fa405.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.vs/test_binance_api/FileContentIndex/b3851704-becb-4656-808f-4bd2b5b2b80e.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.vs/test_binance_api/FileContentIndex/fc7be642-61af-4cb9-b50d-9efaaf068563.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.vs/test_binance_api/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.vs/test_binance_api/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/bin/Debug/net7.0/BouncyCastle.Crypto.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/bin/Debug/net7.0/Mailing.Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/Debug/net7.0/Mailing.Service.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/bin/Debug/net7.0/Mailing.Service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/Debug/net7.0/Mailing.Service.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/bin/Debug/net7.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/Debug/net7.0/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/bin/Debug/net7.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/Debug/net7.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/bin/Debug/net7.0/test_binance_api.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/bin/Debug/net7.0/test_binance_api.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/test_binance_api.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/test_binance_api.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/test_binance_api.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/test_binance_api.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/test_binance_api.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/test_binance_api.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/test_binance_api.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/test_binance_api.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/test_binance_api.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/test_binance_api.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/test_binance_api.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/Debug/net7.0/test_binance_api.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/obj/test_binance_api.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/test_binance_api.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/obj/test_binance_api.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/obj/test_binance_api.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/bin/Debug/net7.0/Mailing.Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/bin/Debug/net7.0/Mailing.Service.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/bin/Debug/net7.0/Mailing.Service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/bin/Debug/net7.0/Mailing.Service.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/Mailing.Service.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/ref/Mailing.Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/ref/Mailing.Service.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/refint/Mailing.Service.dll" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/obj/Debug/net7.0/refint/Mailing.Service.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/obj/Mailing.Service.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/obj/Mailing.Service.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/obj/Mailing.Service.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/obj/Mailing.Service.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User.Mailing.Service/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/User.Mailing.Service/obj/project.nuget.cache" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2gZ2OuQreWbQNBdk1hWPgimuePg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Matoka26",
+    "last_opened_file_path": "C:/Users/Mihai/Desktop/chestii/facultate shit/repos/Crypto-Exchange",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1399e978-286e-42d8-beb0-b3353908be61" name="Changes" comment="" />
+      <created>1715890751304</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715890751304</updated>
+      <workItem from="1715890752886" duration="11000" />
+      <workItem from="1715891673932" duration="1991000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

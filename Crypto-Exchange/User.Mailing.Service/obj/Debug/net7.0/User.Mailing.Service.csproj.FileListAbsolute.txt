@@ -1,0 +1,12 @@
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\bin\Debug\net7.0\User.Mailing.Service.deps.json
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\bin\Debug\net7.0\User.Mailing.Service.dll
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\bin\Debug\net7.0\User.Mailing.Service.pdb
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\User.Mailing.Service.csproj.AssemblyReference.cache
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\User.Mailing.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\User.Mailing.Service.AssemblyInfoInputs.cache
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\User.Mailing.Service.AssemblyInfo.cs
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\User.Mailing.Service.csproj.CoreCompileInputs.cache
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\User.Mailing.Service.dll
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\refint\User.Mailing.Service.dll
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\User.Mailing.Service.pdb
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\ref\User.Mailing.Service.dll
