@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "jY3zrHQ4ga34TH3J4VRBIpZw+BbDWXQP9H+lipuEYQYIuU1GdM4RzNdhnTJqP7ArDYF7EwvaxDgOOpK4BH1NcA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rzvan\\.nuget\\packages\\bouncycastle.cryptography\\2.3.0\\bouncycastle.cryptography.2.3.0.nupkg.sha512",
+    "C:\\Users\\rzvan\\.nuget\\packages\\mailkit\\4.5.0\\mailkit.4.5.0.nupkg.sha512",
+    "C:\\Users\\rzvan\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\rzvan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\rzvan\\.nuget\\packages\\mimekit\\4.5.0\\mimekit.4.5.0.nupkg.sha512",
+    "C:\\Users\\rzvan\\.nuget\\packages\\netcore.mailkit\\2.1.0\\netcore.mailkit.2.1.0.nupkg.sha512",
+    "C:\\Users\\rzvan\\.nuget\\packages\\system.formats.asn1\\8.0.0\\system.formats.asn1.8.0.0.nupkg.sha512",
+    "C:\\Users\\rzvan\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\rzvan\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.0\\system.security.cryptography.pkcs.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

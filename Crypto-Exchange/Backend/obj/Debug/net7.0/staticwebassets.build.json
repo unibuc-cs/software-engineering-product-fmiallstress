@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "e228KhzWUhTrasSLUsHD6fcrqic3JCnD3GtlYiir1Pk=",
+  "Source": "test_binance_api",
+  "BasePath": "_content/test_binance_api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

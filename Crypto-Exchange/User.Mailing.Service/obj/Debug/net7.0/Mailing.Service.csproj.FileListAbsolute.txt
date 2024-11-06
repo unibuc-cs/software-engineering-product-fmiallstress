@@ -1,0 +1,85 @@
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.deps.json
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.dll
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.pdb
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.AssemblyReference.cache
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfoInputs.cache
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfo.cs
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.CoreCompileInputs.cache
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.dll
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\refint\Mailing.Service.dll
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.pdb
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Proiect-MDS\Proiect-MDS\User.Mailing.Service\obj\Debug\net7.0\ref\Mailing.Service.dll
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.deps.json
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.dll
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.pdb
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.AssemblyReference.cache
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfoInputs.cache
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfo.cs
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.CoreCompileInputs.cache
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.dll
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\refint\Mailing.Service.dll
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.pdb
+C:\Users\Mihai\Desktop\chestii\facultate shit\repos\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\ref\Mailing.Service.dll
+C:\Users\tiril\source\repos\Crypto-Project\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.dll
+C:\Users\tiril\source\repos\Crypto-Project\User.Mailing.Service\obj\Debug\net7.0\refint\Mailing.Service.dll
+C:\Users\tiril\source\repos\Crypto-Project\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.pdb
+C:\Users\tiril\source\repos\Crypto-Project\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.deps.json
+C:\Users\tiril\source\repos\Crypto-Project\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.dll
+C:\Users\tiril\source\repos\Crypto-Project\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.pdb
+C:\Users\tiril\source\repos\Crypto-Project\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.AssemblyReference.cache
+C:\Users\tiril\source\repos\Crypto-Project\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tiril\source\repos\Crypto-Project\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfoInputs.cache
+C:\Users\tiril\source\repos\Crypto-Project\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfo.cs
+C:\Users\tiril\source\repos\Crypto-Project\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.CoreCompileInputs.cache
+C:\Users\tiril\source\repos\Crypto-Project\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.sourcelink.json
+C:\Users\tiril\source\repos\Crypto-Project\User.Mailing.Service\obj\Debug\net7.0\ref\Mailing.Service.dll
+C:\Users\Latitude 5440\source\repos\cryptoandrei\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.deps.json
+C:\Users\Latitude 5440\source\repos\cryptoandrei\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.dll
+C:\Users\Latitude 5440\source\repos\cryptoandrei\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.pdb
+C:\Users\Latitude 5440\source\repos\cryptoandrei\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.AssemblyReference.cache
+C:\Users\Latitude 5440\source\repos\cryptoandrei\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Latitude 5440\source\repos\cryptoandrei\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfoInputs.cache
+C:\Users\Latitude 5440\source\repos\cryptoandrei\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfo.cs
+C:\Users\Latitude 5440\source\repos\cryptoandrei\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.CoreCompileInputs.cache
+C:\Users\Latitude 5440\source\repos\cryptoandrei\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.dll
+C:\Users\Latitude 5440\source\repos\cryptoandrei\User.Mailing.Service\obj\Debug\net7.0\refint\Mailing.Service.dll
+C:\Users\Latitude 5440\source\repos\cryptoandrei\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.pdb
+C:\Users\Latitude 5440\source\repos\cryptoandrei\User.Mailing.Service\obj\Debug\net7.0\ref\Mailing.Service.dll
+C:\Users\Latitude 5440\Documents\GitHub\crypp\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.deps.json
+C:\Users\Latitude 5440\Documents\GitHub\crypp\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.dll
+C:\Users\Latitude 5440\Documents\GitHub\crypp\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.pdb
+C:\Users\Latitude 5440\Documents\GitHub\crypp\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.AssemblyReference.cache
+C:\Users\Latitude 5440\Documents\GitHub\crypp\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Latitude 5440\Documents\GitHub\crypp\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfoInputs.cache
+C:\Users\Latitude 5440\Documents\GitHub\crypp\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfo.cs
+C:\Users\Latitude 5440\Documents\GitHub\crypp\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.CoreCompileInputs.cache
+C:\Users\Latitude 5440\Documents\GitHub\crypp\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.dll
+C:\Users\Latitude 5440\Documents\GitHub\crypp\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\refint\Mailing.Service.dll
+C:\Users\Latitude 5440\Documents\GitHub\crypp\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.pdb
+C:\Users\Latitude 5440\Documents\GitHub\crypp\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\ref\Mailing.Service.dll
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An2\Sem 2\MDS\testIS\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.deps.json
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An2\Sem 2\MDS\testIS\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.dll
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An2\Sem 2\MDS\testIS\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.pdb
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An2\Sem 2\MDS\testIS\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.AssemblyReference.cache
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An2\Sem 2\MDS\testIS\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An2\Sem 2\MDS\testIS\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfoInputs.cache
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An2\Sem 2\MDS\testIS\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfo.cs
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An2\Sem 2\MDS\testIS\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.CoreCompileInputs.cache
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An2\Sem 2\MDS\testIS\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.dll
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An2\Sem 2\MDS\testIS\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\refint\Mailing.Service.dll
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An2\Sem 2\MDS\testIS\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.pdb
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An2\Sem 2\MDS\testIS\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\ref\Mailing.Service.dll
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.deps.json
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.dll
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.pdb
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.AssemblyReference.cache
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfoInputs.cache
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfo.cs
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.CoreCompileInputs.cache
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.dll
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\refint\Mailing.Service.dll
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.pdb
+C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\ref\Mailing.Service.dll
