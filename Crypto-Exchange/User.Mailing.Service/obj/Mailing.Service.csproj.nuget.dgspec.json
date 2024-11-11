@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj": {}
+    "C:\\Users\\Mihai\\Desktop\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj": {
+    "C:\\Users\\Mihai\\Desktop\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
+        "projectUniqueName": "C:\\Users\\Mihai\\Desktop\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
         "projectName": "Mailing.Service",
-        "projectPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
-        "packagesPath": "C:\\Users\\rzvan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\obj\\",
+        "projectPath": "C:\\Users\\Mihai\\Desktop\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
+        "packagesPath": "C:\\Users\\Mihai\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mihai\\Desktop\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\Vs Community\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\rzvan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Mihai\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

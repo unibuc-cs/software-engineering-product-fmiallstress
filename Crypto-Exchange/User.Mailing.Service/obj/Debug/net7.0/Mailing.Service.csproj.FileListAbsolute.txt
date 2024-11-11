@@ -83,3 +83,15 @@ C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product
 C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\refint\Mailing.Service.dll
 C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.pdb
 C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\ref\Mailing.Service.dll
+C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.deps.json
+C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.dll
+C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.pdb
+C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.AssemblyReference.cache
+C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfoInputs.cache
+C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfo.cs
+C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.CoreCompileInputs.cache
+C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.dll
+C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\refint\Mailing.Service.dll
+C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.pdb
+C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\ref\Mailing.Service.dll
