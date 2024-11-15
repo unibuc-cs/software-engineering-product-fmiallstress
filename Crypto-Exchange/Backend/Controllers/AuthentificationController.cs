@@ -38,34 +38,26 @@ namespace test_binance_api.Controllers
 
                 if (existsUser != null)
                     throw new Exception("Email is already used");
-                Console.WriteLine("AM AJUNS AICI!02452");
 
                 var user = _mapper.Map<User>(signup);
-                Console.WriteLine("AM AJUNS AICI!0");
-
                 var result = await _userManager.CreateAsync(user);
-                Console.WriteLine("AM AJUNS AICI!");
 
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, "Regular");
-                    Console.WriteLine("AM AJUNS AICI!1");
 
                     // Create auth token
                     var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    Console.WriteLine("AM AJUNS AICI2!");
 
                     var configurationLink = Url.Action(nameof(ConfirmEmail), "Authentification", new { token, email = user.Email });
-                    Console.WriteLine("AM AJUNS AICI3!");
 
-                    var message = new Message(new String[] { user.Email! }, "Confirmation email link", configurationLink!);
-                    Console.WriteLine("AM AJUNS AICI!4");
+                    var messageBody = $"Use the following token to confirm your email: {token}. Visit our confirmation page to complete the process.";
+                    var message = new Message(new String[] { user.Email! }, "Email Confirmation Token", messageBody);
+                    _emailService.SendEmail(message);
 
                     // Send verification url
 
-                    // _emailService.SendEmail(message);
-
-                    Console.WriteLine("AM AJUNS AICI5!");
+                    _emailService.SendEmail(message);
 
                     return Ok(new ErrorResponse()
                     {
@@ -122,6 +114,16 @@ namespace test_binance_api.Controllers
             }
         }
 
+        [HttpGet("isLogged")]
+        public bool isLogged()
+        {
+            if (User.Identity.IsAuthenticated)
+                return true;
+
+            return false;
+
+        }
+
 
         [HttpGet("ConfirmEmail")]
         public async Task<IActionResult> ConfirmEmail(string token, string email)
@@ -152,6 +154,35 @@ namespace test_binance_api.Controllers
                 Message = "Error occured"
             }); ;
 
+        }
+
+
+        [HttpGet("isemailconfirmed")]
+        public async Task<IActionResult> IsEmailConfirmed([FromQuery] string email)
+        {
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(email);
+                if (user == null)
+                {
+                    return NotFound(new ErrorResponse()
+                    {
+                        StatusCode = 404,
+                        Message = "User not found"
+                    });
+                }
+
+                var isEmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);
+                return Ok(new { Email = email, IsEmailConfirmed = isEmailConfirmed });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ErrorResponse()
+                {
+                    StatusCode = 400,
+                    Message = ex.Message
+                });
+            }
         }
     }
 }

@@ -124,6 +124,15 @@ namespace test_binance_api.Service.UserService
 
             throw new Exception("Wrong password");
         }
+        
+
+/*        public Boolean IsLogged()
+        {
+            var user = _userRepository.GetUserById();
+            var isLogged = _signInManager.IsSignedIn();
+
+            return isLogged;
+        }*/
 
 
         public async Task Logout()
