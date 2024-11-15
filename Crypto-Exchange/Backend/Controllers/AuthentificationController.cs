@@ -28,7 +28,7 @@ namespace test_binance_api.Controllers
             _mapper = mapper;
         }
 
-        
+
         [HttpPost("signup")]
         public async Task<IActionResult> SignUp([FromBody] UserSignUpDTO signup)
         {
@@ -48,12 +48,16 @@ namespace test_binance_api.Controllers
 
                     // Create auth token
                     var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    var configurationLink = Url.Action(nameof(ConfirmEmail), "Authentification", new { token, email = user.Email });
-                    var message = new Message(new String[] { user.Email! }, "Confirmation email link", configurationLink!);
 
-                    // Send verification url
+                    var configurationLink = Url.Action(nameof(ConfirmEmail), "Authentification", new { token, email = user.Email });
+
+                    var messageBody = $"Use the following token to confirm your email: {token}. Visit our confirmation page to complete the process.";
+                    var message = new Message(new String[] { user.Email! }, "Email Confirmation Token", messageBody);
                     _emailService.SendEmail(message);
 
+                    // Send verification url
+
+                    _emailService.SendEmail(message);
 
                     return Ok(new ErrorResponse()
                     {
@@ -76,7 +80,8 @@ namespace test_binance_api.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDTO user)
         {
-            try {
+            try
+            {
                 return Ok(await _userService.Login(user));
 
             }
@@ -93,7 +98,7 @@ namespace test_binance_api.Controllers
         [HttpPost("logout")]
         public async Task<IActionResult> Logout()
         {
-            
+
             try
             {
                 await _userService.Logout();
@@ -110,6 +115,16 @@ namespace test_binance_api.Controllers
             }
         }
 
+        [HttpGet("isLogged")]
+        public bool isLogged()
+        {
+            if (User.Identity.IsAuthenticated)
+                return true;
+
+            return false;
+
+        }
+
 
         [HttpGet("ConfirmEmail")]
         public async Task<IActionResult> ConfirmEmail(string token, string email)
@@ -123,7 +138,7 @@ namespace test_binance_api.Controllers
                     Message = "User Does Not Exist"
                 });
             }
-            
+
             var result = await _userManager.ConfirmEmailAsync(user, token);
             if (result.Succeeded)
             {
@@ -140,6 +155,35 @@ namespace test_binance_api.Controllers
                 Message = "Error occured"
             }); ;
 
+        }
+
+
+        [HttpGet("isemailconfirmed")]
+        public async Task<IActionResult> IsEmailConfirmed([FromQuery] string email)
+        {
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(email);
+                if (user == null)
+                {
+                    return NotFound(new ErrorResponse()
+                    {
+                        StatusCode = 404,
+                        Message = "User not found"
+                    });
+                }
+
+                var isEmailConfirmed = await _userManager.IsEmailConfirmedAsync(user);
+                return Ok(new { Email = email, IsEmailConfirmed = isEmailConfirmed });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ErrorResponse()
+                {
+                    StatusCode = 400,
+                    Message = ex.Message
+                });
+            }
         }
     }
 }

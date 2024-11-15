@@ -9084,19 +9084,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mihai\\.nuget\\packages\\": {}
+    "C:\\Users\\rzvan\\.nuget\\packages\\": {},
+    "D:\\Vs Community\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mihai\\Desktop\\software-engineering-product-fmiallstress\\Crypto-Exchange\\CryptoPredictTestProject\\CryptoPredictTestProject.csproj",
+      "projectUniqueName": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\CryptoPredictTestProject\\CryptoPredictTestProject.csproj",
       "projectName": "CryptoPredictTestProject",
-      "projectPath": "C:\\Users\\Mihai\\Desktop\\software-engineering-product-fmiallstress\\Crypto-Exchange\\CryptoPredictTestProject\\CryptoPredictTestProject.csproj",
-      "packagesPath": "C:\\Users\\Mihai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mihai\\Desktop\\software-engineering-product-fmiallstress\\Crypto-Exchange\\CryptoPredictTestProject\\obj\\",
+      "projectPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\CryptoPredictTestProject\\CryptoPredictTestProject.csproj",
+      "packagesPath": "C:\\Users\\rzvan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\CryptoPredictTestProject\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Vs Community\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Mihai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rzvan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9110,8 +9115,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Mihai\\Desktop\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj": {
-              "projectPath": "C:\\Users\\Mihai\\Desktop\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj"
+            "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj": {
+              "projectPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj"
             }
           }
         }
@@ -9171,7 +9176,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
