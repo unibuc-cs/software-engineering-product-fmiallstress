@@ -13,9 +13,5 @@ namespace test_binance_api.Models
         public DateTime? DateTime { get; set; }
         public string? Type { get; set; } //buy or sell
 
-
-        public Guid? IdHistory { get; set; }
-        public History? History { get; set; }
-
     }
 }

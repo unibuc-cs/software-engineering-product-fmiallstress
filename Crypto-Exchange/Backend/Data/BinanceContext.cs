@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using test_binance_api.Models;
+using test_binance_api.Models.DTOs;
 
 namespace test_binance_api.Data
 {
@@ -9,7 +10,9 @@ namespace test_binance_api.Data
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Coin> Coins { get; set; }
-        public DbSet<History> Histories { get; set; }
+        public DbSet<Wallet> Wallets { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<CoinDTO> CoinDTOs { get; set; }
 
         public BinanceContext(DbContextOptions<BinanceContext> options) : base(options) { }
 
@@ -17,27 +20,34 @@ namespace test_binance_api.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            //one to one
+            // User to Wallet (1-to-1)
             modelBuilder.Entity<User>()
-                .HasOne(h => h.History)
-                .WithOne(u => u.User)
-                .HasForeignKey<History>(fk => fk.IdUser)
+                .HasOne(u => u.Wallet)
+                .WithOne(w => w.User)
+                .HasForeignKey<Wallet>(w => w.IdUser)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<User>()
-                .HasOne(w => w.Wallet)
-                .WithOne(u => u.User)
-                .HasForeignKey<Wallet>(fk => fk.IdUser)
+            // Wallet to Transactions (1-to-Many)
+            modelBuilder.Entity<Wallet>()
+                .HasMany(w => w.Transactions)
+                .WithOne(t => t.Wallet)
+                .HasForeignKey(t => t.WalletId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            //one to many
-            modelBuilder.Entity<History>()
-                .HasMany(c => c.Transactions)
-                .WithOne(h => h.History)
-                .HasForeignKey(a => a.IdHistory)
+            // Wallet to CurrentHoldings (1-to-Many)
+            modelBuilder.Entity<Wallet>()
+                .HasMany(w => w.CurrentHoldings)
+                .WithOne()
+                .HasForeignKey(c => c.Id) // Reference by CoinDTO Id (since it inherits BaseEntity)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            // Transactions to Coin (Many-to-1)
+            modelBuilder.Entity<Transaction>()
+                .HasOne(t => t.Coin)
+                .WithMany()
+                .HasForeignKey(t => t.CoinId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
-
 }
+

@@ -7,6 +7,8 @@ namespace test_binance_api.Models
     {
         public Guid? IdUser { get; set; }
         public User? User { get; set; }
-        public ICollection<CoinDTO>? Transactions { get; set; }
+        public uint? Balance { get; set; } = 0;
+        public ICollection<CoinDTO> CurrentHoldings { get; set; } = new List<CoinDTO>();
+        public ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
     }
 }
