@@ -15,5 +15,6 @@ namespace test_binance_api.Service.UserService
         //Task<ErrorResponse> SignUp(UserSignUpDTO signup);
         //Task<ErrorResponse> ConfirmEmail(string email, string token);
         Task StoreDeviceToken(string IdUser, string deviceToken);
+        Task SetUserBalance(Guid id, decimal amount);
     }
 }

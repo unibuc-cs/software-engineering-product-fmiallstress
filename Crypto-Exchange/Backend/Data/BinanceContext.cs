@@ -31,7 +31,7 @@ namespace test_binance_api.Data
             modelBuilder.Entity<Wallet>()
                 .HasMany(w => w.Transactions)
                 .WithOne(t => t.Wallet)
-                .HasForeignKey(t => t.WalletId)
+                .HasForeignKey(t => t.IdWallet)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // Wallet to CurrentHoldings (1-to-Many)

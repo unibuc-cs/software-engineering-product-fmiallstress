@@ -25,12 +25,25 @@ namespace test_binance_api.Repository.UserRepository
             throw new Exception(result.Errors.First().Description);
         }
 
-
         //find
         public async Task<User> GetUserById(Guid id)
         {
             return await _userManager.FindByIdAsync(id.ToString());
         }
+
+        public async Task UpdateUserBalance(User user, decimal amount)
+        {
+            user.Balance += amount;   
+            await _userManager.UpdateAsync(user);
+        }
+
+        public async Task SetUserBalance(Guid id, decimal amount)
+        {
+            var user = await _userManager.FindByIdAsync(id.ToString());
+            user.Balance = amount;
+            await _userManager.UpdateAsync(user);
+        }
+
 
         public async Task<List<User>> GetUsersAsync()
         {
@@ -60,5 +73,7 @@ namespace test_binance_api.Repository.UserRepository
             if ((await _userManager.UpdateAsync(user)).Succeeded == false)
                 throw new Exception("User update failed");
         }
+
+
     }
 }
