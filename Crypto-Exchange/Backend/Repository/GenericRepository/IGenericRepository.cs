@@ -26,7 +26,7 @@ namespace test_binance_api.Repository.GenericRepository
 
         //find
 
-        TEntity FindById(Guid id);
+        TEntity FindById(Guid? id);
         Task<TEntity> FindByIdAsync(Guid id);
 
         //save

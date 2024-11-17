@@ -54,7 +54,10 @@
 
                 CreateMap<Coin, CoinShowDTO>();
                 CreateMap<CoinShowDTO, Coin>();
-            }
+
+                CreateMap<Wallet, WalletDTO>();
+                CreateMap<WalletDTO, Wallet>();
+        }
 
         }
     }

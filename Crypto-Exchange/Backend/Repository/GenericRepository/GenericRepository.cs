@@ -82,7 +82,7 @@ namespace test_binance_api.Repository.GenericRepository
 
         //find
 
-        public TEntity FindById(Guid id)
+        public TEntity FindById(Guid? id)
         {
             return _table.Find(id);
         }

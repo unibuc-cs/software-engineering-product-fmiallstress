@@ -4,7 +4,7 @@ namespace test_binance_api.Models
 {
     public class Transaction : BaseEntity
     {
-        public Guid WalletId { get; set; }
+        public Guid IdWallet { get; set; }
         public Wallet Wallet { get; set; }
 
         public Guid CoinId { get; set; }

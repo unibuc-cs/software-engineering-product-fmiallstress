@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using test_binance_api.Data;
 
@@ -11,9 +12,11 @@ using test_binance_api.Data;
 namespace test_binance_api.Migrations
 {
     [DbContext(typeof(BinanceContext))]
-    partial class BinanceContextModelSnapshot : ModelSnapshot
+    [Migration("20241117163330_walletAltered")]
+    partial class walletAltered
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -232,9 +235,6 @@ namespace test_binance_api.Migrations
                     b.Property<DateTime?>("FirstCreated")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("IdWallet")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime?>("LastModified")
                         .HasColumnType("datetime2");
 
@@ -248,11 +248,14 @@ namespace test_binance_api.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("WalletId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CoinId");
 
-                    b.HasIndex("IdWallet");
+                    b.HasIndex("WalletId");
 
                     b.ToTable("Transactions");
                 });
@@ -356,9 +359,6 @@ namespace test_binance_api.Migrations
                     b.Property<Guid?>("IdUser")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("IdWallet")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime?>("LastModified")
                         .HasColumnType("datetime2");
 
@@ -441,7 +441,7 @@ namespace test_binance_api.Migrations
 
                     b.HasOne("test_binance_api.Models.Wallet", "Wallet")
                         .WithMany("Transactions")
-                        .HasForeignKey("IdWallet")
+                        .HasForeignKey("WalletId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

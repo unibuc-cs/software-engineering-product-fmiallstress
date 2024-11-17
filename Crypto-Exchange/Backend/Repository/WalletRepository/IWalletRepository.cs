@@ -5,5 +5,6 @@ namespace test_binance_api.Repository.WalletRepository
 {
     public interface IWalletRepository : IGenericRepository<Wallet>
     {
+        void UpdateWalletBalance(Wallet wallet, decimal amount);
     }
 }

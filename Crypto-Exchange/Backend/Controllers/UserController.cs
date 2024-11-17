@@ -8,7 +8,7 @@ using test_binance_api.Models.DTOs;
 using test_binance_api.Models.DTOs.User;
 using test_binance_api.Models.Errors;
 using test_binance_api.Service.UserService;
-
+using test_binance_api.Service.UserWalletService;
 
 namespace test_binance_api.Controllers
 {
@@ -19,12 +19,14 @@ namespace test_binance_api.Controllers
         private readonly UserManager<User> _userManager;
         private readonly IUserService _userService;
         private readonly IEmailService _emailService;
+        private readonly IUserWalletService _userWalletService;
 
-        public UserController(UserManager<User> userManager, IUserService userService, IEmailService emailService)
+        public UserController(UserManager<User> userManager, IUserService userService, IEmailService emailService, IUserWalletService userWalletService)
         {
             _userManager = userManager;
             _userService = userService;
             _emailService = emailService;
+            _userWalletService = userWalletService;
         }
 
 
@@ -70,6 +72,27 @@ namespace test_binance_api.Controllers
                 });
             }
         }
+
+        [HttpPost("SetAmount/{userId}/{amount}")]
+        public async Task<IActionResult> SetUserAmount(Guid userId, decimal amount)
+        {
+            try 
+            {
+               await _userService.SetUserBalance(userId, amount);
+                return Ok();
+            }
+            catch (Exception exception)
+            {
+                return BadRequest(new ErrorResponse()
+                {
+                    StatusCode = 500,
+                    Message = exception.Message
+                });
+            }
+        }
+
+
+
 
         [HttpGet("get_all")]
         public async Task<IActionResult> GetAllUsers()

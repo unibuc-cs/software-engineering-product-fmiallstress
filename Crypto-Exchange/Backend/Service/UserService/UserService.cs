@@ -4,6 +4,7 @@ using Mailing.Service.Services;
 using Microsoft.AspNetCore.Identity;
 //using NETCore.MailKit.Core;
 using System;
+using System.Security.Claims;
 using test_binance_api.Models;
 using test_binance_api.Models.DTOs.User;
 using test_binance_api.Models.Errors;
@@ -33,6 +34,12 @@ namespace test_binance_api.Service.UserService
             _configuration = configuration;
             _emailService = emailService;
         }
+
+        public async Task SetUserBalance(Guid id, decimal amount)
+        {
+            await _userRepository.SetUserBalance(id, amount);
+        }
+
 
         //create
         public async Task<UserDTO> CreateAsync(UserCreateDTO user)
