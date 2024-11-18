@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using test_binance_api.Service.CandleStickService;
 using test_binance_api.Service.CoinService;
+using test_binance_api.Service.TradingService;
 using test_binance_api.Service.UserWalletService;
 
 namespace test_binance_api.Controllers
@@ -13,12 +14,13 @@ namespace test_binance_api.Controllers
         {
             private readonly ICoinService _coinService;
             private readonly IUserWalletService _userWalletService;
+            private readonly ITradingService _tradingService;
 
-
-            public TradingController(ICoinService coinService, IUserWalletService userWalletService)
+            public TradingController(ICoinService coinService, IUserWalletService userWalletService, ITradingService tradingService)
             {
                 _coinService = coinService;
                 _userWalletService = userWalletService;
+                _tradingService = tradingService;
             }
 
 
@@ -89,6 +91,36 @@ namespace test_binance_api.Controllers
                     return BadRequest(ex.Message);
                 }
             }
+
+            [HttpGet("Buy/{userId}/{pair}/{amount}")]
+            public async Task<IActionResult> Buy(Guid userId, string pair, decimal amount)
+            {
+                try
+                {
+                    await _tradingService.Buy(userId, pair, amount);
+                    return Ok(); 
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(ex.Message);
+                }
+            }
+
+            [HttpGet("Sell/{userId}/{pair}/{amount}")]
+            public async Task<IActionResult> Sell(Guid userId, string pair, decimal amount)
+            {
+                try
+                {
+                    await _tradingService.Sell(userId, pair, amount);
+                    return Ok();
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(ex.Message);
+                }
+            }
+
+
         }
 
 

@@ -4,6 +4,7 @@ namespace test_binance_api.Service.TradingService
 {
     public interface ITradingService
     {
-        Task<Coin> Trade(Guid idUser, string type, string pair, decimal amount);
+        Task Buy(Guid idUser, string pair, decimal amount);
+        Task Sell(Guid idUser, string pair, decimal amount);
     }
 }
