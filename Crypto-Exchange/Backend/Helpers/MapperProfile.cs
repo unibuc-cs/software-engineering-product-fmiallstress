@@ -55,8 +55,11 @@
                 CreateMap<Coin, CoinShowDTO>();
                 CreateMap<CoinShowDTO, Coin>();
 
-                CreateMap<Wallet, WalletDTO>();
-                CreateMap<WalletDTO, Wallet>();
+
+            CreateMap<Asset, Asset>();
+            CreateMap<Wallet, WalletDTO>()
+                .ForMember(dest => dest.CurrentHoldings, opt => opt.MapFrom(src => src.CurrentHoldings));
+            CreateMap<WalletDTO, Wallet>();
         }
 
         }

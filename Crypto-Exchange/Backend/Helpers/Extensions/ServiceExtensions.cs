@@ -14,6 +14,7 @@ using test_binance_api.Service.UserWalletService;
 using Mailing.Service.Services;
 using test_binance_api.Repository.CandleStickRepository;
 using test_binance_api.Service.CandleStickService;
+using test_binance_api.Repository.AssetRepository;
 
 namespace test_binance_api.Helpers.Extensions
 {
@@ -28,6 +29,7 @@ namespace test_binance_api.Helpers.Extensions
             services.AddTransient<ICandleStickRepository, CandleStickRepository>();
             services.AddScoped<UserManager<User>>();
             services.AddScoped<RoleManager<IdentityRole<Guid>>>();
+            services.AddScoped<IAssetRepository, AssetRepository>();
             services.AddHttpClient();
 
             return services;

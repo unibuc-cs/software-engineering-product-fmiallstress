@@ -59,12 +59,9 @@ namespace test_binance_api.Service.UserWalletService
             }
 
             var idWallet = user.IdWallet;
-
-            Console.WriteLine($"Wallet {idWallet}");
-            
             var wallet = _walletRepository.FindById(idWallet);
-            Console.WriteLine(wallet.Balance);
             return _mapper.Map<WalletDTO>(wallet);
+
         }
             
 

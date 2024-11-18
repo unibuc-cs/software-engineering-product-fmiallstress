@@ -1,4 +1,6 @@
-﻿using Microsoft.Identity.Client;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
+using System.Diagnostics.CodeAnalysis;
 using test_binance_api.Data;
 using test_binance_api.Models;
 using test_binance_api.Repository.GenericRepository;
@@ -17,5 +19,20 @@ namespace test_binance_api.Repository.WalletRepository
             wallet.Balance += amount;
             Update(wallet);
         }
+
+
+        public Wallet GetWalletWithCurrentHoldings(Guid walletId)
+        {
+            return _binanceContext.Wallets
+                .Include(w => w.CurrentHoldings)
+                .FirstOrDefault(w => w.Id == walletId);
+        }
+        public async Task<Wallet> GetWalletWithCurrentHoldingsAsync(Guid? walletId)
+        { 
+            return await _binanceContext.Wallets
+                .Include(w => w.CurrentHoldings)
+                .FirstOrDefaultAsync(w => w.Id == walletId);
+        }
+
     }
 }

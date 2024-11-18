@@ -12,7 +12,7 @@ namespace test_binance_api.Data
         public DbSet<Coin> Coins { get; set; }
         public DbSet<Wallet> Wallets { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
-        public DbSet<CoinDTO> CoinDTOs { get; set; }
+        public DbSet<Asset> Assets { get; set; }
 
         public BinanceContext(DbContextOptions<BinanceContext> options) : base(options) { }
 
@@ -38,7 +38,7 @@ namespace test_binance_api.Data
             modelBuilder.Entity<Wallet>()
                 .HasMany(w => w.CurrentHoldings)
                 .WithOne()
-                .HasForeignKey(c => c.Id) // Reference by CoinDTO Id (since it inherits BaseEntity)
+                .HasForeignKey(c => c.IdWallet) 
                 .OnDelete(DeleteBehavior.Cascade);
 
             // Transactions to Coin (Many-to-1)
