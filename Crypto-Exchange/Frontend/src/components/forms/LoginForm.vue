@@ -73,10 +73,12 @@ async function login() {
     });
     // rsiData.value = response.data;  // Set the fetched data to rsiData
     // console.log('RSI values:', response.data);
-    console.log(response)
-    localStorage.setItem('user', true);
-    window.location.href='/';
-    successMessage.value = 'Log In was succesfull!'
+    if (response.status === 200) {
+        localStorage.setItem('user', true);
+        localStorage.setItem('user-id', response.data)
+        window.location.href='/';
+        successMessage.value = 'Log In was succesfull!'
+    }
   } catch (error) {
     errorMessage.value = 'An error happened. Please try again!'
     if (error.response) {
