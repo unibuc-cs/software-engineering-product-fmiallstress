@@ -170,6 +170,11 @@
                 <p class="text-sm text-gray-500">
                   You are about to {{ modalType }} {{ symbol }} at the current price of {{ price }} {{ livePriceFormData.convertSymbol }}.
                 </p>
+
+                <p class="text-sm text-gray-500">
+                  Your wallet amount: <span class="font-bold text-green-400">${{ userData.walletBalance }}</span>
+                </p>
+
                 <p class="text-sm text-gray-500 mt-4">
                   Amount: {{ amount }} {{ symbol }}
                 </p>
@@ -184,7 +189,7 @@
           </div>
         </div>
         <div class="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-          <button @click="confirmAction" type="button" class="w-full inline-flex justify-center rounded-md border border-green-500 shadow-sm px-4 py-2 bg-green-500 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm">
+          <button @click="confirmAction(modalType)" type="button" class="w-full inline-flex justify-center rounded-md border border-green-500 shadow-sm px-4 py-2 bg-green-500 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm">
             Continue
           </button>
           <button @click="showModal = false" type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
@@ -235,7 +240,7 @@ const candleFormData = ref({
   second_year: null,
 })
 
-const apiBaseUrl = 'https://localhost:7286/api/Coin'
+const apiBaseUrl = 'https://localhost:7286/api'
 const price = ref(null)
 const previousPrices = ref([])
 const candlesData = ref([])
@@ -243,11 +248,44 @@ const showModal = ref(false)
 const modalType = ref('')
 const amount = ref(0.01) // Default to minimum step value
 
+const userId = ref(null)
+const userData = ref({})
+const errorMessage = ref('')
+
 // Computed property to calculate total price
 const totalPrice = computed(() => (amount.value * price.value).toFixed(2))
 
 // Log the props to the console when the component is mounted
-onMounted(() => {
+onMounted(async () => {
+  userId.value = localStorage.getItem('user-id')
+  if (userId.value) {
+    try {
+      const response = await axios.get(`${apiBaseUrl}/Trading/GetWallet/${userId.value}`) 
+      console.log('I AM HERE 3')
+      if (response.status === 200) {
+        userData.value.walletBalance = response.data.balance
+        userData.value.currentHoldings = response.data.currentHoldings
+        userData.value.transactions = response.data.transactions
+
+        console.log(userData.value) 
+      }
+    } catch (error) {
+      errorMessage.value = 'An error happened. Please try again!'
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        console.error('Request failed with status code:', error.response.status)
+        console.error('Response data:', error.response.data)
+        console.error('Response headers:', error.response.headers)
+      } else if (error.request) {
+        // The request was made but no response was received
+        console.error('No response received:', error.request)
+      } else {
+        // Something happened in setting up the request that triggered an error
+        console.error('Error:', error.message)
+      }
+    }
+  }
+
   // Get the current date
   const currentDate = new Date()
 
@@ -276,7 +314,7 @@ onMounted(() => {
 
 async function getLivePrice() {
   try {
-    const response = await axios.get(`${apiBaseUrl}/LivePrice/${props.symbol + livePriceFormData.value.convertSymbol}`)
+    const response = await axios.get(`${apiBaseUrl}/Coin/LivePrice/${props.symbol + livePriceFormData.value.convertSymbol}`)
     price.value = response.data;
   } catch (error) {
     handleApiError(error);
@@ -296,7 +334,7 @@ async function fetchPreviousPrices() {
   const loadingToastId = toast.loading("Loading previous prices...");
 
   try {
-    const response = await axios.get(`${apiBaseUrl}/PreviousPrices/${props.symbol + previousPricesFormData.value.convertSymbol}/${previousPricesFormData.value.day}/${previousPricesFormData.value.month}/${previousPricesFormData.value.year}/${previousPricesFormData.value.offset}`)
+    const response = await axios.get(`${apiBaseUrl}/Coin/PreviousPrices/${props.symbol + previousPricesFormData.value.convertSymbol}/${previousPricesFormData.value.day}/${previousPricesFormData.value.month}/${previousPricesFormData.value.year}/${previousPricesFormData.value.offset}`)
     previousPrices.value = response.data;
     toast.update(loadingToastId, { type: toast.TYPE.SUCCESS, render: "Previous prices loaded", autoClose: 3000, isLoading: false });
   } catch (error) {
@@ -309,7 +347,7 @@ async function fetchCandleInfo() {
   const loadingToastId = toast.loading("Loading candle chart data...");
 
   try {
-    const response = await axios.get(`${apiBaseUrl}/Candles/${props.symbol + candleFormData.value.convertSymbol}/${candleFormData.value.interval}/${candleFormData.value.first_day}/${candleFormData.value.first_month}/${candleFormData.value.first_year}/${candleFormData.value.second_day}/${candleFormData.value.second_month}/${candleFormData.value.second_year}`)
+    const response = await axios.get(`${apiBaseUrl}/Coin/Candles/${props.symbol + candleFormData.value.convertSymbol}/${candleFormData.value.interval}/${candleFormData.value.first_day}/${candleFormData.value.first_month}/${candleFormData.value.first_year}/${candleFormData.value.second_day}/${candleFormData.value.second_month}/${candleFormData.value.second_year}`)
     candlesData.value = response.data;
     toast.update(loadingToastId, { type: toast.TYPE.SUCCESS, render: "Candles chart data loaded", autoClose: 3000, isLoading: false });
   } catch (error) {
@@ -323,9 +361,61 @@ function openModal(type) {
   showModal.value = true
 }
 
-function confirmAction() {
+async function confirmAction(modalType) {
+  const loadingToastId = toast.loading("Loading candle chart data...");
   // Handle the buy/sell action here
+  console.log('MODAL TYPE:', modalType)
+  console.log(props.symbol + 'USDT')
+
+  if (modalType === 'buy') {
+    try {
+      const response = await axios.get(`${apiBaseUrl}/Trading/Buy/${userId.value}/${ props.symbol + 'USDT' }/${ totalPrice.value }`)
+      toast.update(loadingToastId, { type: toast.TYPE.SUCCESS, render: "Transaction was successful!", autoClose: 3000, isLoading: false });
+      updateWallet()
+    } catch (error) {
+      toast.update(loadingToastId, { type: toast.TYPE.ERROR, render: "Transaction failed. Please try again.", autoClose: 3000, isLoading: false });
+      handleApiError(error);
+    }
+  } else {
+    try {
+      const response = await axios.get(`${apiBaseUrl}/Trading/Sell/${userId.value}/${ props.symbol + 'USDT' }/${ totalPrice.value }`)
+      toast.update(loadingToastId, { type: toast.TYPE.SUCCESS, render: "Transaction was successful!", autoClose: 3000, isLoading: false });
+      updateWallet()
+    } catch (error) {
+      toast.update(loadingToastId, { type: toast.TYPE.ERROR, render: "Transaction failed. Please try again.", autoClose: 3000, isLoading: false });
+      handleApiError(error);
+    }
+  }
+
   showModal.value = false
+}
+
+async function updateWallet () {
+  console.log('UPDATING WALLET')
+  try {
+      const response = await axios.get(`${apiBaseUrl}/Trading/GetWallet/${userId.value}`) 
+      if (response.status === 200) {
+        userData.value.walletBalance = response.data.balance
+        userData.value.currentHoldings = response.data.currentHoldings
+        userData.value.transactions = response.data.transactions
+
+        console.log(userData.value) 
+      }
+    } catch (error) {
+      errorMessage.value = 'An error happened. Please try again!'
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        console.error('Request failed with status code:', error.response.status)
+        console.error('Response data:', error.response.data)
+        console.error('Response headers:', error.response.headers)
+      } else if (error.request) {
+        // The request was made but no response was received
+        console.error('No response received:', error.request)
+      } else {
+        // Something happened in setting up the request that triggered an error
+        console.error('Error:', error.message)
+      }
+    }
 }
 
 function handleApiError(error) {

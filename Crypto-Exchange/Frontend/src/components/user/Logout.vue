@@ -13,6 +13,7 @@ defineProps({
 
 onMounted(() => {
   localStorage.removeItem('user')
+  localStorage.removeItem('user-id')
 })
 
 </script>

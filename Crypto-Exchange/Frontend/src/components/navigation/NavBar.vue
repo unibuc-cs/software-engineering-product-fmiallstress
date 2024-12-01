@@ -25,7 +25,7 @@
 
     <!-- Secondary Navigation -->
     <div class="hidden xl:flex space-x-4 items-center">
-      <RouterLink to="/profile" class="py-2 px-4 bg-white hover:bg-gray-200 text-gray-700 rounded-lg">Profile</RouterLink>
+      <RouterLink to="/profile" v-if="isAuthenticated" class="py-2 px-4 bg-white hover:bg-gray-200 text-gray-700 rounded-lg">Profile</RouterLink>
       <RouterLink to="/login" v-if="!isAuthenticated" class="py-2 px-4 bg-white hover:bg-gray-200 text-gray-700 rounded-lg">Login</RouterLink>
       <RouterLink to="/register" v-if="!isAuthenticated" class="py-2 px-4 bg-white hover:bg-gray-200 text-gray-700 rounded-lg">Register</RouterLink>
       <RouterLink to="/logout" v-if="isAuthenticated" class="py-2 px-4 bg-white hover:bg-gray-200 text-gray-700 rounded-lg" @click="logout">Logout</RouterLink>
@@ -96,6 +96,7 @@ const isAuthenticated = computed(() => authenticated.value);
 
 const logout = () => {
   localStorage.removeItem('user');
+  localStorage.removeItem('user-id');
   checkAuth();
   router.push('/login');
 }
