@@ -62,7 +62,14 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
-SeedData(app);
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<BinanceContext>();
+    dbContext.Database.Migrate();
+
+    SeedData(app);
+}
 
 if (app.Environment.IsDevelopment())
 {
