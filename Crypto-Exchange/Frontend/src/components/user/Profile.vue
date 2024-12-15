@@ -13,11 +13,17 @@
             <p class="mb-2"><strong>Wallet Balance:</strong> {{ formattedWalletBalance }}</p>
             <p><strong>Money Invested:</strong> {{ formattedMoneyInvested }}</p>
         </div>
+
+
         <div class="mt-12 mb-6 bg-gray-100 p-6 rounded-lg shadow">
           <h2 class="text-xl font-semibold mb-4">Wallet Distribution</h2>
           <donut-chart :wallet-data="walletData" :labels="walletLabels" :money-invested="userData.moneyInvested"></donut-chart>
           <div class="mt-12"></div>
           <pie-chart :pie-data="walletData" :labels="walletLabels" :money-invested="userData.moneyInvested"></pie-chart>
+           
+          <!-- PATTERN CHART -->
+               <div class="mt-12"></div>
+               <pattern-chart :wallet-data="walletData" :labels="walletLabels" :money-invested="userData.moneyInvested"></pattern-chart>
         </div>
       </div>
     </div>
@@ -28,10 +34,10 @@
   import axios from 'axios'
   import PieChart from '../charts/PieChart.vue'
   import DonutChart from '../charts/DonutChart.vue'
+  import PatternChart from '../charts/PatternChart.vue'
 
   const apiBaseUrl = 'https://localhost:7286'
   const userId = ref()
-
   const userData = ref({
     userName: 'default_username',
     email: 'default_email@mail.com',
