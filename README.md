@@ -1,5 +1,4 @@
-## CI/CD
-
+## CI/CD 
 Am folosit **GitHub** pentru a avea un mod de lucru cat mai organizat, ceea ce ne-a ajutat sa detectam si sa rezolvam din timp bug-urile aparute si eventualele conflicte.
 
 Fiecare membru al echipei a lucrat pe branch-ul sau. Dupa ce un membru isi termina task-ul, realiza un merge request pentru integrarea modificarilor in branch-ul principal.
