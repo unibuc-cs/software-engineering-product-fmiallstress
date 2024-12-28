@@ -50,3 +50,53 @@ Atat backend-ul aplicatiei, cat si baza de date MSSQL sunt configurate folosind 
   - **Dev**: Configuratie rapidă, debug activ, date fictive.  
   - **Staging**: Configuratie similară productiei, dar cu date semi-reale pentru testare.  
   - **Production**: Configuratie finala, cu date reale si optimizari de performanta.
+
+## QA
+**Obiectivele testarii:**
+  - **Acuratetea predictiilor**
+    - **Obiectivul Testarii**: testarea algoritmilor de predictie pentru asigurarea rezultatelor optime
+    - **Momentul Testarii**: Testare si Mentenanta
+    - **Metoda Testarii**: Analiza logicii algoritmilor ***(White Box Testing)***, Verificarea rezultatelor predictiilor ***(Black Box Testing)***
+    - **Rezultate**:
+
+  - **Corectitudinea datelor utilizatorilor**
+    - **Obiectivul Testarii**: validarea corectitudinii si actualizarii datelor utilizatorilor
+    - **Momentul Testarii**: Testare, Dezvoltare si Analiza
+    - **Metoda Testarii**: Verificarea fluxului datelor intre componentele aplicatiei ***(Integration testing)***, Verificarea manuala a datelor ***(Manual testing)***
+    - **Rezultate**:
+
+  - **Performanta aplicatiei**
+    - **Obiectivul Testarii**: evaluarea timpului de raspuns al aplicatiei si al algoritmilor de predictie  
+    - **Momentul Testarii**: Testare si Mentenanta
+    - **Metoda Testarii**: Verificarea timpilor de raspuns ai aplicatiei
+    - **Rezultate**:
+
+  - **Functionalitatea generala**
+    - **Obiectivul Testarii**: testarea fluxului de utilizare
+    - **Momentul Testarii**: Testare si Implementare
+    - **Metoda Testarii**: ***Unit tests***
+    - **Rezultate**:
+
+  - **Compatibilitatea**
+    - **Obiectivul Testarii**: testarea aplicatiei pe diverse dispozitive, sisteme de operare si browsere
+    - **Momentul Testarii**: Testare si Implementare
+    - **Metoda Testarii**: Verificarea aplicatiei pe diferite browsere, versiuni si sisteme de operare
+    - **Rezultate**:
+
+  - **Scalabilitatea**
+    - **Obiectivul Testarii**: asigurarea functionalitatii aplicatiei pentru un numar mare de utilizatori
+    - **Momentul Testarii**: Dezvoltare, Testare si Implementare
+    - **Metoda Testarii**: Evaluarea performantei aplicatiei pe o perioada lunga de timp sub incarcatura constanta
+    - **Rezultate**:
+
+  - **UX/UI**
+    - **Obiectivul Testarii**: testarea interfetei pentru a asigura navigare usoara si accesibilitate intuitiva
+    - **Momentul Testarii**: Design, Testare si Implementare
+    - **Metoda Testarii**: Evaluarea interactiunii utilizatorilor cu aplicatia
+    - **Rezultate**:
+
+  - **Testare in scenarii reale**
+    - **Obiectivul Testarii**: simularea unei interactiuni reale a unui utilizator cu aplicatia
+    - **Momentul Testarii**: Testare si Implementare
+    - **Metoda Testarii**: Rularea aplicatiei cu stimuli obisnuiti corespunzatori unui user real
+    - **Rezultate**:
