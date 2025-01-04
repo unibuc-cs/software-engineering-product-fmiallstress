@@ -35,7 +35,7 @@ namespace test_binance_api.Controllers
                     {
                         return NotFound("Wallet not found");
                     }
-
+                    Console.WriteLine($"controller Wallet Holdings: {wallet.CurrentHoldings.Count}");
                     return Ok(wallet);
                 }
                 catch (Exception ex)

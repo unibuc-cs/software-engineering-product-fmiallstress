@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj": {}
+    "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\proiect\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj": {
+    "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\proiect\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj",
+        "projectUniqueName": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\proiect\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj",
         "projectName": "test_binance_api",
-        "projectPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj",
+        "projectPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\proiect\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj",
         "packagesPath": "C:\\Users\\rzvan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\obj\\",
+        "outputPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\proiect\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Vs Community\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj": {
-                "projectPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj"
+              "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\proiect\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj": {
+                "projectPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\proiect\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj"
               }
             }
           }
@@ -114,14 +114,14 @@
         }
       }
     },
-    "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj": {
+    "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\proiect\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
+        "projectUniqueName": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\proiect\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
         "projectName": "Mailing.Service",
-        "projectPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
+        "projectPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\proiect\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
         "packagesPath": "C:\\Users\\rzvan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\obj\\",
+        "outputPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\proiect\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Vs Community\\Shared\\NuGetPackages"

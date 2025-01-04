@@ -24,13 +24,16 @@ namespace test_binance_api.Repository.WalletRepository
         public Wallet GetWalletWithCurrentHoldings(Guid walletId)
         {
             return _binanceContext.Wallets
-                .Include(w => w.CurrentHoldings)
-                .FirstOrDefault(w => w.Id == walletId);
+            .Include(w => w.CurrentHoldings)
+            .Include(w => w.Transactions)
+            .FirstOrDefault(w => w.Id == walletId);
         }
+
         public async Task<Wallet> GetWalletWithCurrentHoldingsAsync(Guid? walletId)
         { 
             return await _binanceContext.Wallets
                 .Include(w => w.CurrentHoldings)
+                .Include(w => w.Transactions)
                 .FirstOrDefaultAsync(w => w.Id == walletId);
         }
 

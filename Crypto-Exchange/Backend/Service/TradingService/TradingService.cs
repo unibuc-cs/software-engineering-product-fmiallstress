@@ -4,6 +4,7 @@ using test_binance_api.Models;
 using test_binance_api.Models.DTOs;
 using test_binance_api.Repository.AssetRepository;
 using test_binance_api.Repository.CoinRepository;
+using test_binance_api.Repository.TransactionRepository;
 using test_binance_api.Repository.UserRepository;
 using test_binance_api.Repository.WalletRepository;
 
@@ -17,6 +18,7 @@ namespace test_binance_api.Service.TradingService
         private readonly IWalletRepository _walletRepository;
         private readonly IMapper _mapper;
         private readonly IAssetRepository _assetRepository;
+        private readonly ITransactionRepository _transactionRepository;
 
 
 
@@ -26,13 +28,15 @@ namespace test_binance_api.Service.TradingService
             IUserRepository userRepository, 
             IWalletRepository walletRepository,
             IMapper mapper,
-            IAssetRepository assetRepository)
+            IAssetRepository assetRepository,
+            ITransactionRepository transactionRepository)
         {
             _coinRepository = coinRepository;
             _userRepository = userRepository;
             _walletRepository = walletRepository;
             _mapper = mapper;
             _assetRepository = assetRepository;
+            _transactionRepository = transactionRepository;
         }
 
         public async Task Buy(Guid idUser, string pair, decimal amount)
@@ -73,6 +77,19 @@ namespace test_binance_api.Service.TradingService
                 await _assetRepository.CreateAsync(newPair);
             }
 
+            var transaction = new Transaction
+            {
+                Id = Guid.NewGuid(),
+                Symbol = pair,
+                Amount = position_size,
+                Price = price,
+                Type = "BUY",
+                TransactionDate = DateTime.Now,
+                IdWallet = idWallet
+            };
+            wallet.Transactions.Add(transaction);
+            await _transactionRepository.CreateAsync(transaction);
+
             _walletRepository.Update(wallet);
         }
 
@@ -105,6 +122,19 @@ namespace test_binance_api.Service.TradingService
                 _assetRepository.Delete(ownPair);
             }
             else _assetRepository.Update(ownPair);
+
+            var transaction = new Transaction
+            {
+                Id = Guid.NewGuid(),
+                Symbol = pair,
+                Amount = position_size,
+                Price = price,
+                Type = "SELL",
+                TransactionDate = DateTime.Now,
+                IdWallet = idWallet
+            };
+            wallet.Transactions.Add(transaction);
+            await _transactionRepository.CreateAsync(transaction);
 
             _walletRepository.Update(wallet);
         }
