@@ -59,9 +59,12 @@ namespace test_binance_api.Service.UserWalletService
             }
 
             var idWallet = user.IdWallet;
-            var wallet = _walletRepository.FindById(idWallet);
-            return _mapper.Map<WalletDTO>(wallet);
+            var wallet = await _walletRepository.GetWalletWithCurrentHoldingsAsync(idWallet);
+            Console.WriteLine($"unmapped Wallet Holdings: {wallet.CurrentHoldings.Count}");
+            var mappedWallet = _mapper.Map<WalletDTO>(wallet);
+            Console.WriteLine($"mapped Wallet Holdings: {mappedWallet.CurrentHoldings.Count}");
 
+            return mappedWallet;
         }
             
 

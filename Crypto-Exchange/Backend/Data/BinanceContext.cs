@@ -28,11 +28,11 @@ namespace test_binance_api.Data
                 .OnDelete(DeleteBehavior.Cascade);
 
             // Wallet to Transactions (1-to-Many)
-            modelBuilder.Entity<Wallet>()
+/*            modelBuilder.Entity<Wallet>()
                 .HasMany(w => w.Transactions)
                 .WithOne(t => t.Wallet)
                 .HasForeignKey(t => t.IdWallet)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Cascade);*/
 
             // Wallet to CurrentHoldings (1-to-Many)
             modelBuilder.Entity<Wallet>()
@@ -42,11 +42,11 @@ namespace test_binance_api.Data
                 .OnDelete(DeleteBehavior.Cascade);
 
             // Transactions to Coin (Many-to-1)
-            modelBuilder.Entity<Transaction>()
+/*            modelBuilder.Entity<Transaction>()
                 .HasOne(t => t.Coin)
                 .WithMany()
                 .HasForeignKey(t => t.CoinId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Cascade);*/
         }
     }
 }
