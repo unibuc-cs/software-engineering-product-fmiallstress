@@ -53,6 +53,8 @@ namespace test_binance_api.Service.TradingService
                 throw new Exception("Insufficient balance!");
 
             var position_size = amount / price;
+            var fee = position_size * ((decimal)(0.05) / 100);
+            position_size -= fee;
             wallet.Balance -= amount;
 
             var ownPair = wallet.CurrentHoldings.FirstOrDefault(c => c.Symbol.Equals(pair, StringComparison.OrdinalIgnoreCase));
@@ -85,7 +87,8 @@ namespace test_binance_api.Service.TradingService
                 Price = price,
                 Type = "BUY",
                 TransactionDate = DateTime.Now,
-                IdWallet = idWallet
+                IdWallet = idWallet,
+                Fee = fee
             };
             wallet.Transactions.Add(transaction);
             await _transactionRepository.CreateAsync(transaction);
@@ -104,6 +107,8 @@ namespace test_binance_api.Service.TradingService
                 throw new Exception("Wallet not found!");
 
             var position_size = amount / price;
+            var fee = position_size * ((decimal)(0.05) / 100);
+            position_size += fee;
 
             var ownPair = wallet.CurrentHoldings.FirstOrDefault(c => c.Symbol.Equals(pair, StringComparison.OrdinalIgnoreCase));
 
@@ -131,7 +136,8 @@ namespace test_binance_api.Service.TradingService
                 Price = price,
                 Type = "SELL",
                 TransactionDate = DateTime.Now,
-                IdWallet = idWallet
+                IdWallet = idWallet,
+                Fee = fee
             };
             wallet.Transactions.Add(transaction);
             await _transactionRepository.CreateAsync(transaction);
