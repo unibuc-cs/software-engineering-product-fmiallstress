@@ -61,7 +61,6 @@ const routes = [
     name: 'Candles',
     component: Candles,
   }
-  // Add more routes here as needed
 ];
 
 const router = createRouter({

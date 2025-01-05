@@ -424,24 +424,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rzvan\\.nuget\\packages\\": {},
-    "D:\\Vs Community\\Shared\\NuGetPackages": {}
+    "C:\\Users\\tiril\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
+      "projectUniqueName": "C:\\Users\\tiril\\IS-Project\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
       "projectName": "Mailing.Service",
-      "projectPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
-      "packagesPath": "C:\\Users\\rzvan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\obj\\",
+      "projectPath": "C:\\Users\\tiril\\IS-Project\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
+      "packagesPath": "C:\\Users\\tiril\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tiril\\IS-Project\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Vs Community\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\rzvan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\tiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -449,6 +444,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -461,6 +457,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -492,7 +493,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -74,7 +74,6 @@ const routes = [
     component: Coin,
     props: true
   },
-  // Add more routes here as needed
 ];
 
 function isAuthenticated() {

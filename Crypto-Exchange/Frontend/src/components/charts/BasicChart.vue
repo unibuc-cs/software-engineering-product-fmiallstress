@@ -60,18 +60,15 @@
     }
   ]);
   
-  // Function to update the chart data
   const updateChartData = () => {
     series.value[0].data = props.rsiValues.map(value => parseFloat(value.toFixed(2)));
     chartOptions.value.xaxis.categories = Array.from({ length: series.value[0].data.length }, (_, i) => i + 1);
   };
   
-  // Watch the prop for changes and update the chart data
   watch(() => props.rsiValues, (newVal, oldVal) => {
     updateChartData();
   }, { immediate: true });
   
-  // Call updateChartData on mount
   onMounted(() => {
     updateChartData();
   });

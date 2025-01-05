@@ -95,3 +95,16 @@ C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange
 C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\refint\Mailing.Service.dll
 C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.pdb
 C:\Users\Mihai\Desktop\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\ref\Mailing.Service.dll
+C:\Users\tiril\IS-Project\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.deps.json
+C:\Users\tiril\IS-Project\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.dll
+C:\Users\tiril\IS-Project\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\bin\Debug\net7.0\Mailing.Service.pdb
+C:\Users\tiril\IS-Project\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.AssemblyReference.cache
+C:\Users\tiril\IS-Project\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tiril\IS-Project\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfoInputs.cache
+C:\Users\tiril\IS-Project\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.AssemblyInfo.cs
+C:\Users\tiril\IS-Project\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.csproj.CoreCompileInputs.cache
+C:\Users\tiril\IS-Project\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.sourcelink.json
+C:\Users\tiril\IS-Project\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.dll
+C:\Users\tiril\IS-Project\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\refint\Mailing.Service.dll
+C:\Users\tiril\IS-Project\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\Mailing.Service.pdb
+C:\Users\tiril\IS-Project\software-engineering-product-fmiallstress\Crypto-Exchange\User.Mailing.Service\obj\Debug\net7.0\ref\Mailing.Service.dll

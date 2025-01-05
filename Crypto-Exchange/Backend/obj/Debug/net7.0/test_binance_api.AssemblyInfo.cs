@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("test_binance_api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bcedfab72f0f7ede3d4ba91e1f0ae76e5bba3c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("test_binance_api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("test_binance_api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
