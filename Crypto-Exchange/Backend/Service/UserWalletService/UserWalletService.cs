@@ -33,7 +33,7 @@ namespace test_binance_api.Service.UserWalletService
                 {
                     Id = Guid.NewGuid(),
                     IdUser = user.Id,
-                    Balance = 10,
+                    Balance = 0,
                 };
                 Console.WriteLine(user.IdWallet);
                 await _walletRepository.CreateAsync(wallet);
