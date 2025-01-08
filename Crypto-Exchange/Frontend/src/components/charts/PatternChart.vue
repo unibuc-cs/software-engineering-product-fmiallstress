@@ -1,8 +1,8 @@
 <template>
   <div :class="'w-full mx-auto mt-10 ' + classes">
-    <div id="pattern-chart" class="bg-white shadow-md rounded-lg p-4">
+    <div id="bar-chart" class="bg-white shadow-md rounded-lg p-4">
       <apexchart
-        type="radar"
+        type="bar"
         :options="chartOptions"
         :series="series"
         class="w-full"
@@ -39,23 +39,13 @@ const series = ref([]);
 
 const chartOptions = ref({
   chart: {
-    type: 'radar',
+    type: 'bar',
     height: 400
   },
   title: {
-    text: 'Pattern Chart'
+    text: 'Bar Chart'
   },
   labels: props.labels,
-  tooltip: {
-    y: {
-      formatter: (value) => {
-        return `$${value.toFixed(2)}`; 
-      }
-    }
-  },
-  xaxis: {
-    categories: props.labels 
-  },
   responsive: [
     {
       breakpoint: 480,
@@ -68,32 +58,50 @@ const chartOptions = ref({
         }
       }
     }
-  ]
+  ],
+  tooltip: {
+    y: {
+      formatter: (value) => {
+        return `≈ $${value.toFixed(2)}`;
+      },
+    },
+  },
+  xaxis: {
+    labels: {
+      formatter: (value) => {
+        return value.toUpperCase(); // Display symbol in uppercase
+      }
+    }
+  },
+  dataLabels: {
+    enabled: true,
+    formatter: (value) => {
+      return `≈ $${Math.ceil(value)}`; // Display the approximately symbol, dollar sign, and ceiling of the amount
+    }
+  }
 });
 
 const updateChartData = () => {
   if (props.walletData.length && props.labels.length) {
-    series.value = [
-      {
-        name: 'Holdings',
-        data: props.walletData 
-      }
-    ];
-    chartOptions.value.labels = [...props.labels]; 
-    chartOptions.value.xaxis.categories = [...props.labels];
+    series.value = [{ name: 'Holdings', data: props.walletData.map(Math.ceil) }];
+    chartOptions.value = {
+      ...chartOptions.value,
+      labels: [...props.labels],
+    };
+
     loading.value = false;
   } else {
     series.value = [];
-    chartOptions.value.labels = [];
-    chartOptions.value.xaxis.categories = [];
+    chartOptions.value = {
+      ...chartOptions.value,
+      labels: [],
+    };
+
     loading.value = false;
   }
-
 };
 
-onMounted(() => {
-  updateChartData();
-});
+onMounted(updateChartData);
 
 watch(
   () => props.walletData,
@@ -108,7 +116,6 @@ watch(
   (newLabels) => {
     if (newLabels.length) {
       chartOptions.value.labels = [...newLabels];
-      chartOptions.value.xaxis.categories = [...newLabels];
     }
   },
   { deep: true }
@@ -116,7 +123,7 @@ watch(
 </script>
 
 <style scoped>
-#pattern-chart {
+#bar-chart {
   max-width: 100%;
 }
 </style>

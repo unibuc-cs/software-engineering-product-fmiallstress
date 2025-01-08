@@ -424,19 +424,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tiril\\.nuget\\packages\\": {}
+    "C:\\Users\\Latitude 5440\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tiril\\IS-Project\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
+      "projectUniqueName": "C:\\Users\\Latitude 5440\\Desktop\\is_proj\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
       "projectName": "Mailing.Service",
-      "projectPath": "C:\\Users\\tiril\\IS-Project\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
-      "packagesPath": "C:\\Users\\tiril\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tiril\\IS-Project\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\obj\\",
+      "projectPath": "C:\\Users\\Latitude 5440\\Desktop\\is_proj\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\Mailing.Service.csproj",
+      "packagesPath": "C:\\Users\\Latitude 5440\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Latitude 5440\\Desktop\\is_proj\\software-engineering-product-fmiallstress\\Crypto-Exchange\\User.Mailing.Service\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\tiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Latitude 5440\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -493,7 +498,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }
