@@ -100,3 +100,9 @@ Atat backend-ul aplicatiei, cat si baza de date MSSQL sunt configurate folosind 
     - **Momentul Testarii**: Testare si Implementare
     - **Metoda Testarii**: Rularea aplicatiei cu stimuli obisnuiti corespunzatori unui user real
     - **Rezultate**: Aplicatia se comporta normal
+  ## Security Report
+ - HTTPS (HyperText Transfer Protocol Secure)
+   - HTTPS a secure extension of HTTP that encrypts communication between a web server and a client using TLS (Transport Layer Security). This ensures sensitive data, such as login credentials and personal information, is protected from eavesdropping and man-in-the-middle attacks.
+- ORM (Object-Relational Mapping)
+   - Entity Framework is a .NET ORM tool that lets developers interact with relational databases using domain-specific objects. It includes built-in features to prevent SQL injection, validate data and securely manage database connections.
+   - Identity Framework is a .NET library for managing user authentication and authorization. It supports features like password hashing, role-based access, and external logins (e.g., Google, Facebook), making it easier to implement secure user management in .NET apps.
