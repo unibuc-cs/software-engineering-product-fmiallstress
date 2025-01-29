@@ -5,7 +5,7 @@ workspace "Name" "Description" {
     model {
 
         user = person "User" {
-            description "A person that wants to find fun events to take part in"
+            description "A person that wants to simulate crypto transactions"
         }
 
         cryptoPred = softwareSystem "CryptoPred" {
@@ -15,7 +15,7 @@ workspace "Name" "Description" {
                 technology "MySQL"
             }
             server = container "Api Application" {
-                description "Provides events management via a JSON/HTTP Api"
+                description "Provides user requests via a JSON/HTTP Api"
                 technology "C# and .Net"
 
                 chatGPTController = component "ChatGPT Controller" {
