@@ -33,7 +33,7 @@ namespace test_binance_api.Service.UserWalletService
                 {
                     Id = Guid.NewGuid(),
                     IdUser = user.Id,
-                    Balance = 10,
+                    Balance = 0,
                 };
                 Console.WriteLine(user.IdWallet);
                 await _walletRepository.CreateAsync(wallet);
@@ -59,9 +59,12 @@ namespace test_binance_api.Service.UserWalletService
             }
 
             var idWallet = user.IdWallet;
-            var wallet = _walletRepository.FindById(idWallet);
-            return _mapper.Map<WalletDTO>(wallet);
+            var wallet = await _walletRepository.GetWalletWithCurrentHoldingsAsync(idWallet);
+            Console.WriteLine($"unmapped Wallet Holdings: {wallet.CurrentHoldings.Count}");
+            var mappedWallet = _mapper.Map<WalletDTO>(wallet);
+            Console.WriteLine($"mapped Wallet Holdings: {mappedWallet.CurrentHoldings.Count}");
 
+            return mappedWallet;
         }
             
 
@@ -70,14 +73,15 @@ namespace test_binance_api.Service.UserWalletService
             try
             {
                 var user = await _userRepository.GetUserById(id);
-                if (user.Balance < amount)
+                if (user.Balance < amount + 1)
                     throw new Exception("Insufficient Funds!");
+
 
                 var wallet = _walletRepository.FindById(user.IdWallet);
                 var walletDTO = _mapper.Map<Wallet>(wallet);
 
                 await _userRepository.UpdateUserBalance(user, -amount);
-                _walletRepository.UpdateWalletBalance(walletDTO, amount);
+                _walletRepository.UpdateWalletBalance(walletDTO, amount-1);
                 
             }
             catch (Exception ex)
@@ -94,12 +98,12 @@ namespace test_binance_api.Service.UserWalletService
                 var user = await _userRepository.GetUserById(id);
                 var wallet = _walletRepository.FindById(user.IdWallet);
 
-                if (wallet.Balance < amount)
+                if (wallet.Balance < amount + 1)
                     throw new Exception("Insufficient Funds!");
 
                 var walletDTO = _mapper.Map<Wallet>(wallet);
 
-                await _userRepository.UpdateUserBalance(user, amount);
+                await _userRepository.UpdateUserBalance(user, amount-1);
                 _walletRepository.UpdateWalletBalance(walletDTO, -amount);
 
             }

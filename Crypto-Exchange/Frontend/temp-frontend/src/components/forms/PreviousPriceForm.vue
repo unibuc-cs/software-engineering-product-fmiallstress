@@ -103,20 +103,17 @@ async function fetchPreviousPrice() {
   try {
     const response = await axios.get(`${apiBaseUrl}/PreviousPrice/${formData.value.pair}/${formData.value.day}/${formData.value.month}/${formData.value.year}`)
 
-    price.value = response.data;  // Set the fetched data to rsiData
+    price.value = response.data;  
     emit('dataGenerated', price)
     console.log('Previous price:', response.data);
   } catch (error) {
     if (error.response) {
-      // The request was made and the server responded with a status code
       console.error('Request failed with status code:', error.response.status);
       console.error('Response data:', error.response.data);
       console.error('Response headers:', error.response.headers);
     } else if (error.request) {
-      // The request was made but no response was received
       console.error('No response received:', error.request);
     } else {
-      // Something happened in setting up the request that triggered an error
       console.error('Error:', error.message);
     }
   }

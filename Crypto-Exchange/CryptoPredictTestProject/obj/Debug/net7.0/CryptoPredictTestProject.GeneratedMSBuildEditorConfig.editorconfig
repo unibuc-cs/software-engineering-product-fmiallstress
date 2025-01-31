@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CryptoPredictTestProject
-build_property.ProjectDir = C:\Users\rzvan\OneDrive\Desktop\Unibuc\An3\Sem 1\IS\software-engineering-product-fmiallstress\Crypto-Exchange\CryptoPredictTestProject\
+build_property.ProjectDir = C:\Users\Latitude 5440\Desktop\is_proj\software-engineering-product-fmiallstress\Crypto-Exchange\CryptoPredictTestProject\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

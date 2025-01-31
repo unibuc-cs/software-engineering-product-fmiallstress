@@ -24,10 +24,8 @@ async function getCoins() {
   try {
     const response = await axios.get(`${coinsEndpoint.value}`)
     coinsList.value = response.data
-    console.log("COINS LIST:", coinsList.value)
-
-    const responseRefresh = await axios.get(`${refreshEndpoint.value}`)
-    console.log(responseRefresh.data)
+    // const responseRefresh = await axios.get(`${refreshEndpoint.value}`)
+    // console.log(responseRefresh.data)
 
   } catch (error) {
     console.log(error)

@@ -160,12 +160,13 @@ namespace test_binance_api.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal?>("Amount")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(18, 8)
+                        .HasColumnType("decimal(18,8)");
 
                     b.Property<DateTime?>("FirstCreated")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("IdWallet")
+                    b.Property<Guid?>("IdWallet")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("LastModified")
@@ -229,22 +230,29 @@ namespace test_binance_api.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(18, 8)
+                        .HasColumnType("decimal(18,8)");
 
-                    b.Property<Guid>("CoinId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<decimal>("Fee")
+                        .HasPrecision(18, 8)
+                        .HasColumnType("decimal(18,8)");
 
                     b.Property<DateTime?>("FirstCreated")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("IdWallet")
+                    b.Property<Guid?>("IdWallet")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("LastModified")
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(18, 8)
+                        .HasColumnType("decimal(18,8)");
+
+                    b.Property<string>("Symbol")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("TransactionDate")
                         .HasColumnType("datetime2");
@@ -253,11 +261,12 @@ namespace test_binance_api.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid?>("WalletId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("CoinId");
-
-                    b.HasIndex("IdWallet");
+                    b.HasIndex("WalletId");
 
                     b.ToTable("Transactions");
                 });
@@ -272,7 +281,8 @@ namespace test_binance_api.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("Balance")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(18, 8)
+                        .HasColumnType("decimal(18,8)");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -432,27 +442,14 @@ namespace test_binance_api.Migrations
                     b.HasOne("test_binance_api.Models.Wallet", null)
                         .WithMany("CurrentHoldings")
                         .HasForeignKey("IdWallet")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("test_binance_api.Models.Transaction", b =>
                 {
-                    b.HasOne("test_binance_api.Models.Coin", "Coin")
-                        .WithMany()
-                        .HasForeignKey("CoinId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("test_binance_api.Models.Wallet", "Wallet")
+                    b.HasOne("test_binance_api.Models.Wallet", null)
                         .WithMany("Transactions")
-                        .HasForeignKey("IdWallet")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Coin");
-
-                    b.Navigation("Wallet");
+                        .HasForeignKey("WalletId");
                 });
 
             modelBuilder.Entity("test_binance_api.Models.Wallet", b =>

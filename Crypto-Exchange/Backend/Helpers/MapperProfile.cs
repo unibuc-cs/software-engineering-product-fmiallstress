@@ -9,13 +9,9 @@
     {
         public class MapperProfile : AutoMapper.Profile
         {
-
-
             public MapperProfile()
             {
                 var hasher = new PasswordHasher<User>();
-
-
 
                 CreateMap<User, UserDTO>();
                 CreateMap<UserDTO, User>()
@@ -56,10 +52,15 @@
                 CreateMap<CoinShowDTO, Coin>();
 
 
-            CreateMap<Asset, Asset>();
+            CreateMap<Asset, AssetDTO>();
+            CreateMap<Transaction, TransactionDTO>();
+
             CreateMap<Wallet, WalletDTO>()
+                .ForMember(dest => dest.CurrentHoldings, opt => opt.MapFrom(src => src.CurrentHoldings))
+                .ForMember(dest => dest.Transactions, opt => opt.MapFrom(src => src.Transactions));
+
+            CreateMap<WalletDTO, Wallet>()
                 .ForMember(dest => dest.CurrentHoldings, opt => opt.MapFrom(src => src.CurrentHoldings));
-            CreateMap<WalletDTO, Wallet>();
         }
 
         }

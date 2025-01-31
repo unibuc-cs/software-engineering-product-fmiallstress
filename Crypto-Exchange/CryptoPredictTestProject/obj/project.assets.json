@@ -9084,23 +9084,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rzvan\\.nuget\\packages\\": {},
-    "D:\\Vs Community\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Latitude 5440\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\CryptoPredictTestProject\\CryptoPredictTestProject.csproj",
+      "projectUniqueName": "C:\\Users\\Latitude 5440\\Desktop\\is_proj\\software-engineering-product-fmiallstress\\Crypto-Exchange\\CryptoPredictTestProject\\CryptoPredictTestProject.csproj",
       "projectName": "CryptoPredictTestProject",
-      "projectPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\CryptoPredictTestProject\\CryptoPredictTestProject.csproj",
-      "packagesPath": "C:\\Users\\rzvan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\CryptoPredictTestProject\\obj\\",
+      "projectPath": "C:\\Users\\Latitude 5440\\Desktop\\is_proj\\software-engineering-product-fmiallstress\\Crypto-Exchange\\CryptoPredictTestProject\\CryptoPredictTestProject.csproj",
+      "packagesPath": "C:\\Users\\Latitude 5440\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Latitude 5440\\Desktop\\is_proj\\software-engineering-product-fmiallstress\\Crypto-Exchange\\CryptoPredictTestProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Vs Community\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\rzvan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Latitude 5440\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -9109,14 +9109,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj": {
-              "projectPath": "C:\\Users\\rzvan\\OneDrive\\Desktop\\Unibuc\\An3\\Sem 1\\IS\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj"
+            "C:\\Users\\Latitude 5440\\Desktop\\is_proj\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj": {
+              "projectPath": "C:\\Users\\Latitude 5440\\Desktop\\is_proj\\software-engineering-product-fmiallstress\\Crypto-Exchange\\Backend\\test_binance_api.csproj"
             }
           }
         }
@@ -9125,6 +9126,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -9176,7 +9182,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

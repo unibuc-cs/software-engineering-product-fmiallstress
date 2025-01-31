@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CryptoPredictTestProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+785a8b1ab915475d5e34ebb7217d4ef3b0531025")]
 [assembly: System.Reflection.AssemblyProductAttribute("CryptoPredictTestProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CryptoPredictTestProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

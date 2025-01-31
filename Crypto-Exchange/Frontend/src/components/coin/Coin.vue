@@ -209,7 +209,6 @@ import 'vue3-toastify/dist/index.css'
 import BasicChart from '../charts/BasicChart.vue'
 import CandleChart from '../charts/CandleChart.vue'
 
-// Define the props
 const props = defineProps({
   symbol: {
     type: String,
@@ -226,7 +225,7 @@ const previousPricesFormData = ref({
   day: null,
   month: null,
   year: null,
-  offset: 30, // Default to 30 days
+  offset: 30, 
 })
 
 const candleFormData = ref({
@@ -246,47 +245,39 @@ const previousPrices = ref([])
 const candlesData = ref([])
 const showModal = ref(false)
 const modalType = ref('')
-const amount = ref(0.01) // Default to minimum step value
+const amount = ref(0.01) 
 
 const userId = ref(null)
 const userData = ref({})
 const errorMessage = ref('')
 
-// Computed property to calculate total price
 const totalPrice = computed(() => (amount.value * price.value).toFixed(2))
 
-// Log the props to the console when the component is mounted
 onMounted(async () => {
   userId.value = localStorage.getItem('user-id')
   if (userId.value) {
     try {
       const response = await axios.get(`${apiBaseUrl}/Trading/GetWallet/${userId.value}`) 
-      console.log('I AM HERE 3')
       if (response.status === 200) {
         userData.value.walletBalance = response.data.balance
         userData.value.currentHoldings = response.data.currentHoldings
         userData.value.transactions = response.data.transactions
 
-        console.log(userData.value) 
       }
     } catch (error) {
       errorMessage.value = 'An error happened. Please try again!'
       if (error.response) {
-        // The request was made and the server responded with a status code
         console.error('Request failed with status code:', error.response.status)
         console.error('Response data:', error.response.data)
         console.error('Response headers:', error.response.headers)
       } else if (error.request) {
-        // The request was made but no response was received
         console.error('No response received:', error.request)
       } else {
-        // Something happened in setting up the request that triggered an error
         console.error('Error:', error.message)
       }
     }
   }
 
-  // Get the current date
   const currentDate = new Date()
 
   const previousDate = new Date()
@@ -321,7 +312,6 @@ async function getLivePrice() {
   }
 }
 
-// Watch the convertSymbol value for changes and call getLivePrice
 watch(() => livePriceFormData.value.convertSymbol, (newValue) => {
   getLivePrice()
   previousPricesFormData.value.convertSymbol = newValue
@@ -363,9 +353,6 @@ function openModal(type) {
 
 async function confirmAction(modalType) {
   const loadingToastId = toast.loading("Loading candle chart data...");
-  // Handle the buy/sell action here
-  console.log('MODAL TYPE:', modalType)
-  console.log(props.symbol + 'USDT')
 
   if (modalType === 'buy') {
     try {
@@ -391,7 +378,6 @@ async function confirmAction(modalType) {
 }
 
 async function updateWallet () {
-  console.log('UPDATING WALLET')
   try {
       const response = await axios.get(`${apiBaseUrl}/Trading/GetWallet/${userId.value}`) 
       if (response.status === 200) {
@@ -399,20 +385,16 @@ async function updateWallet () {
         userData.value.currentHoldings = response.data.currentHoldings
         userData.value.transactions = response.data.transactions
 
-        console.log(userData.value) 
       }
     } catch (error) {
       errorMessage.value = 'An error happened. Please try again!'
       if (error.response) {
-        // The request was made and the server responded with a status code
         console.error('Request failed with status code:', error.response.status)
         console.error('Response data:', error.response.data)
         console.error('Response headers:', error.response.headers)
       } else if (error.request) {
-        // The request was made but no response was received
         console.error('No response received:', error.request)
       } else {
-        // Something happened in setting up the request that triggered an error
         console.error('Error:', error.message)
       }
     }
@@ -420,15 +402,12 @@ async function updateWallet () {
 
 function handleApiError(error) {
   if (error.response) {
-    // The request was made and the server responded with a status code
     console.error('Request failed with status code:', error.response.status);
     console.error('Response data:', error.response.data);
     console.error('Response headers:', error.response.headers);
   } else if (error.request) {
-    // The request was made but no response was received
     console.error('No response received:', error.request);
   } else {
-    // Something happened in setting up the request that triggered an error
     console.error('Error:', error.message);
   }
 }

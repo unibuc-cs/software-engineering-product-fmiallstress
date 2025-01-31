@@ -819,7 +819,10 @@
           "NETCore.MailKit": "2.1.0"
         },
         "runtime": {
-          "Mailing.Service.dll": {}
+          "Mailing.Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
