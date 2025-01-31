@@ -70,14 +70,7 @@ namespace test_binance_api.Controllers
                 string rsiValues = string.Join(", ", rsi);
                 string priceValues = string.Join(", ", prices);
 
-
-                var statement = "these are the rsi values of a currency [" + rsiValues +
-                                    "], and this are the last real values of a currency: [" +
-                                    priceValues +
-                                    "] (head of the value is the most recent price). What do you think are the next " +
-                                    noPreds +
-                                    " prices? Please give me only the list of decimals in CSV format, with no other additional information like text and explanation";
-
+                var statement = "These are the RSI values of a currency: [ " + rsiValues + " ], and these are the last real values of a currency: [ " + priceValues +" ] (head of the value is the most recent price). Predict the next " + noPreds + " prices. **Only return the numbers in CSV format** (e.g., `30.40,21.51,17.45`), with '.', not with ',' between the integer and fractional part. No additional text, disclaimers, or spaces. Just the values.";
 
                 string values = await GetAIBasedResult(statement, 1000);
 
