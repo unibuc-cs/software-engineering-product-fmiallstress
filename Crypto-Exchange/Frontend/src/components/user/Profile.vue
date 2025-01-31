@@ -92,12 +92,17 @@ onMounted(async () => {
     if (response.status === 200) {
       userData.value.walletBalance = response.data.balance;
       userData.value.currentHoldings = response.data.currentHoldings;
+      console.log('CURRENT HOLDINGS:', userData.value.currentHoldings);
       await transformHoldingsToUSDT(); 
       calculateWalletDistribution(); 
     }
   } catch (error) {
     console.error('Error fetching wallet data:', error.message);
   }
+
+  getMoneyEstimate();
+
+  
 });
 
 const amountForTransition = ref(0)
@@ -105,39 +110,30 @@ async function moneyUserWallet () {
   try {
     const response = await axios.get(`${apiBaseUrl}/api/Trading/MoneyUserWallet/${userId.value}/${amountForTransition.value}`);
     if (response.status === 200) {
-      userId.value = localStorage.getItem('user-id');
+      userData.value.walletBalance = userData.value.walletBalance + amountForTransition.value;
+      userData.value.balance = userData.value.balance - amountForTransition.value;
 
-      try {
-        const response = await axios.get(`${apiBaseUrl}/api/User/user/${userId.value}`);
-        if (response.status === 200) {
-          userData.value = response.data;
-        }
-      } catch (error) {
-        console.error('Error fetching user data:', error.message);
-      }
-
-      try {
-        const response = await axios.get(`${apiBaseUrl}/api/Trading/GetWallet/${userId.value}`);
-        if (response.status === 200) {
-          userData.value.walletBalance = response.data.balance;
-          userData.value.currentHoldings = response.data.currentHoldings;
-          await transformHoldingsToUSDT(); 
-          calculateWalletDistribution(); 
-        }
-      } catch (error) {
-        console.error('Error fetching wallet data:', error.message);
-      }
     }
   } catch (error) {
     console.error('Error adding money:', error.message);
   }
 }
 
-/**
- * Converts all holdings to USDT values.
- */
- async function transformHoldingsToUSDT() {
-  const transformedHoldings = [];
+
+async function getMoneyEstimate(){   
+  try {
+    const response = await axios.get(`${apiBaseUrl}/api/Trading/GetWalletEstimate/${userId.value}`);
+    if (response.status === 200) {
+      userData.value.moneyInvested = response.data;
+    }
+  } catch (error) {
+    console.error('Error fetching wallet data:', error.message);
+  }
+}
+
+  const conversionRate = ref(0);
+  const transformedHoldings = ref([]);
+  async function transformHoldingsToUSDT() {
   const cachedRates = {}; 
 
   for (const holding of userData.value.currentHoldings) {
@@ -158,61 +154,50 @@ async function moneyUserWallet () {
 
       const conversionPair = `${baseAsset}USDT`;
 
-      let conversionRate = cachedRates[conversionPair];
-      if (!conversionRate) {
+      conversionRate.value = cachedRates[conversionPair];
+      if (!conversionRate.value) {
         try {
           const response = await axios.get(`${apiBaseUrl}/api/Coin/LivePrice/${conversionPair}`);
-          conversionRate = response.data;
-          cachedRates[conversionPair] = conversionRate; 
+          conversionRate.value = response.data;
+          cachedRates[conversionPair] = conversionRate.value; 
         } catch (error) {
           console.error(`Error fetching live price for ${conversionPair}:`, error.message);
           toast.error(`Failed to fetch conversion rate for ${conversionPair}`);
           continue; 
         }
 
-      const amountInUSDT = amount * conversionRate;
-      console.log(`AMOUNT IN USD OF ${symbol}: `, amountInUSDT)
+      const amountInUSDT = amount * conversionRate.value;
 
-      transformedHoldings.push({
+      transformedHoldings.value.push({
         base: baseAsset, 
         amount: amountInUSDT
       });
+      console.log(transformedHoldings)
     }
   }
 
   const aggregatedHoldings = {};
-  transformedHoldings.forEach(({ base, amount }) => {
+  transformedHoldings.value.forEach(({ base, amount }) => {
     if (!aggregatedHoldings[base]) {
       aggregatedHoldings[base] = 0;
     }
     aggregatedHoldings[base] += amount; 
   });
+  console.log(transformedHoldings)
 
-  userData.value.currentHoldings = Object.entries(aggregatedHoldings).map(([base, amount]) => ({
-    symbol: `${base}USDT`,
-    amount
-  }));
 
 }
 
 
-
-
-
-
-
-
-/**
- * Calculates wallet distribution for charts.
- */
 function calculateWalletDistribution() {
   const totalValue = userData.value.currentHoldings.reduce((total, holding) => total + holding.amount, 0);
-
+  console.log('TOTAL VALUE:', totalValue);
   if (totalValue > 0) {
-    walletData.value = userData.value.currentHoldings.map((holding) => holding.amount);
-    walletLabels.value = userData.value.currentHoldings.map((holding) =>
-      holding.symbol.replace("USDT", "")
-    );
+    console.log('HOLDINGS:', userData.value.currentHoldings)
+    console.log('CONVERSION RATE:', conversionRate.value)
+    walletData.value = transformedHoldings.value.map((holding) => holding.amount);
+    walletLabels.value = transformedHoldings.value.map((holding) => holding.base);
+
   }
 
 }
@@ -228,5 +213,5 @@ const formattedWalletBalance = computed(() => {
 
 const formattedMoneyInvested = computed(() => {
   return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(userData.value.moneyInvested);
-});
+  });
 </script>
