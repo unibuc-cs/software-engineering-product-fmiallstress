@@ -148,7 +148,7 @@ const candlesData = ref([])
 const successMessage = ref(null)
 const errorMessage = ref(null)
 
-const apiBaseUrl = 'https://localhost:7286/api/Coin'
+const apiBaseUrl = 'http://localhost:5009/api/Coin'
 
 async function fetchCandleInfo() {
     const loadingToastId = toast.loading("Loading candle data...");

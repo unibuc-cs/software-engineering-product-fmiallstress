@@ -42,7 +42,7 @@
     pair: '',
   })
 
-  const apiBaseUrl = 'https://localhost:7286/api/Coin'
+  const apiBaseUrl = 'http://localhost:5009/api/Coin'
   const price = ref(null)
 
   async function getLivePrice() {

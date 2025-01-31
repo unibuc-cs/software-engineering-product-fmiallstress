@@ -239,7 +239,7 @@ const candleFormData = ref({
   second_year: null,
 })
 
-const apiBaseUrl = 'https://localhost:7286/api'
+const apiBaseUrl = 'http://localhost:5009/api'
 const price = ref(null)
 const previousPrices = ref([])
 const candlesData = ref([])

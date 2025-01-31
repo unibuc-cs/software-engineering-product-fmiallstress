@@ -47,7 +47,7 @@ import DonutChart from '../charts/DonutChart.vue';
 import PieChart from '../charts/PieChart.vue';
 import PatternChart from '../charts/PatternChart.vue';
 
-const apiBaseUrl = 'https://localhost:7286';
+const apiBaseUrl = 'http://localhost:5009';
 const userId = ref();
 const userData = ref({
   userName: 'default_username',

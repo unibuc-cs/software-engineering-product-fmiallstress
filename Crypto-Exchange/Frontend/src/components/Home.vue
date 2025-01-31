@@ -12,8 +12,8 @@ import axios from 'axios'
 defineProps({
 })
 
-const coinsEndpoint = ref('https://localhost:7286/api/Coin/GetAll');
-const refreshEndpoint = ref('https://localhost:7286/api/Coin/Refresh');
+const coinsEndpoint = ref('http://localhost:5009/api/Coin/GetAll');
+const refreshEndpoint = ref('http://localhost:5009/api/Coin/Refresh');
 const coinsList = ref();
 
 onMounted(() => {

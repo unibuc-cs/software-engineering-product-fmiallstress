@@ -1,0 +1,45 @@
+services:
+  mssql:
+    container_name: sql-server
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    restart: always
+    environment:
+      SA_PASSWORD: Parecanumerge_1
+      ACCEPT_EULA: "Y"
+      MSSQL_DATABASE: "baza"
+      MSSQL_PID: "Developer"
+    ports:
+      - 1433:1433
+    volumes:
+      - my-volume:/var/opt/mssql
+    networks:
+      - backend_network
+    user: root
+    healthcheck:
+      test: ["CMD-SHELL", "pgrep sqlservr > /dev/null || exit 1"]
+      interval: 2s
+      retries: 100
+      timeout: 5s
+      start_period: 30s
+
+  backend:
+    build:
+      context: ./Crypto-Exchange/
+    environment:
+      - ASPNETCORE_URLS=http://+:5009
+      - ASPNETCORE_ENVIRONMENT=Development
+      - CONNECTION_STRING=Server=sql-server,1433;Database=baza;User Id=SA;Password=Parecanumerge_1
+    ports:
+      - "5009:5009"
+    depends_on:
+      mssql:
+        condition: service_healthy  # Wait for mssql to be healthy
+    networks:
+      - backend_network
+
+networks:
+  backend_network:
+    driver: bridge
+
+volumes:
+  my-volume:
