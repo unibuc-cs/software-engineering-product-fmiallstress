@@ -145,6 +145,28 @@ namespace test_binance_api.Service.TradingService
             _walletRepository.Update(wallet);
         }
 
+        public async Task<decimal> GetEstimate(Guid idUser) {
+
+            var user = await _userRepository.GetUserById(idUser);
+            var idWallet = user.IdWallet;
+            var wallet = await _walletRepository.GetWalletWithCurrentHoldingsAsync(idWallet);
+            decimal totalValue = 0;
+
+            if (wallet == null)
+                throw new Exception("Wallet not found!");
+
+            foreach (var asset in wallet.CurrentHoldings)
+            {
+                var name = asset.Symbol;
+                var price = await _coinRepository.GetLivePrice(name);
+                var amount = asset.Amount;
+                totalValue += price * (decimal)amount;
+            }
+
+            return totalValue;
+
+        }
+
 
     }
 }

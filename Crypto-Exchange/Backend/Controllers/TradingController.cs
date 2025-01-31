@@ -46,6 +46,22 @@ namespace test_binance_api.Controllers
                 }
             }
 
+
+            [HttpGet("GetWalletEstimate/{userId}")]
+            public async Task<IActionResult> GetEstimate(Guid userId)
+            {
+                try
+                {
+                    var estimateValue = await _tradingService.GetEstimate(userId);
+                    return Ok(estimateValue);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error: {ex.Message}");
+                    return BadRequest(ex.Message);
+                }
+            }
+
             [HttpGet("MoneyUserWallet/{userId}/{amount}")]
             public async Task<IActionResult> MoneyFromUserToWallet(Guid userId, decimal amount)
             {
