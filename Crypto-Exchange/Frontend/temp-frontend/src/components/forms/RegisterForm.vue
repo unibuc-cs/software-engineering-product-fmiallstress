@@ -77,7 +77,7 @@ const formData = ref({
 const successMessage = ref(null)
 const errorMessage = ref(null)
 
-const apiBaseUrl = 'https://localhost:7286/signup';
+const apiBaseUrl = 'http://localhost:5009/signup';
 
 async function registerUser() {
   try {
