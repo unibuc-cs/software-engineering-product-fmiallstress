@@ -67,11 +67,11 @@ const chartOptions = ref({
     },
   },
   xaxis: {
-    labels: {
-      formatter: (value) => {
-        return value.toUpperCase(); // Display symbol in uppercase
-      }
+  labels: {
+    formatter: (value) => {
+      return String(value).toUpperCase(); // Ensure value is a string before converting to uppercase
     }
+  }
   },
   dataLabels: {
     enabled: true,
