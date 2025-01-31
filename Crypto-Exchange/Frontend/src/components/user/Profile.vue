@@ -11,6 +11,19 @@
         <p class="mb-2"><strong>Balance:</strong> {{ formattedBalance }}</p>
         <p class="mb-2"><strong>Wallet Balance:</strong> {{ formattedWalletBalance }}</p>
         <p><strong>Money Invested:</strong> {{ formattedMoneyInvested }}</p>
+        <div class="flex flex-row items-center gap-4 p-2 w-80 rounded-lg bg-white shadow-md">
+          <input 
+            type="number" 
+            v-model="amountForTransition" 
+            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+            placeholder="Enter amount"
+          >
+          <button @click="moneyUserWallet"
+            class="text-white bg-green-300 rounded-lg hover:bg-green-600 transition px-2 py-1">
+            Add
+          </button>
+        </div>
+
       </div>
 
       <div class="mt-12 mb-6 bg-gray-100 p-6 rounded-lg shadow">
@@ -79,7 +92,6 @@ onMounted(async () => {
     if (response.status === 200) {
       userData.value.walletBalance = response.data.balance;
       userData.value.currentHoldings = response.data.currentHoldings;
-      console.log('CURRENT HOLDINGSSSSSSSSSSSSSSSSSSSSSS:', response.data.currentHoldings);
       await transformHoldingsToUSDT(); 
       calculateWalletDistribution(); 
     }
@@ -87,6 +99,39 @@ onMounted(async () => {
     console.error('Error fetching wallet data:', error.message);
   }
 });
+
+const amountForTransition = ref(0)
+async function moneyUserWallet () {
+  try {
+    const response = await axios.get(`${apiBaseUrl}/api/Trading/MoneyUserWallet/${userId.value}/${amountForTransition.value}`);
+    if (response.status === 200) {
+      userId.value = localStorage.getItem('user-id');
+
+      try {
+        const response = await axios.get(`${apiBaseUrl}/api/User/user/${userId.value}`);
+        if (response.status === 200) {
+          userData.value = response.data;
+        }
+      } catch (error) {
+        console.error('Error fetching user data:', error.message);
+      }
+
+      try {
+        const response = await axios.get(`${apiBaseUrl}/api/Trading/GetWallet/${userId.value}`);
+        if (response.status === 200) {
+          userData.value.walletBalance = response.data.balance;
+          userData.value.currentHoldings = response.data.currentHoldings;
+          await transformHoldingsToUSDT(); 
+          calculateWalletDistribution(); 
+        }
+      } catch (error) {
+        console.error('Error fetching wallet data:', error.message);
+      }
+    }
+  } catch (error) {
+    console.error('Error adding money:', error.message);
+  }
+}
 
 /**
  * Converts all holdings to USDT values.
