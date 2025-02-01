@@ -281,7 +281,7 @@ onMounted(async () => {
   const currentDate = new Date()
 
   const previousDate = new Date()
-  previousDate.setDate(currentDate.getDate() - 30)
+  previousDate.setDate(currentDate.getDate() - 7)
 
   previousPricesFormData.value.day = previousDate.getDate()
   previousPricesFormData.value.month = previousDate.getMonth() + 1
