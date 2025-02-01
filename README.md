@@ -128,7 +128,7 @@ Atat backend-ul aplicatiei, cat si baza de date MSSQL sunt configurate folosind 
   - Acces bazat pe roluri
   - Autentificări externe (de exemplu, Google, Facebook)
 
-  ### CORS (Cross-Origin Resource Sharing)
+### CORS (Cross-Origin Resource Sharing)
 
   - CORS este o caracteristică de securitate implementată în browserele web pentru a controla modul în care resursele de pe un server web pot fi solicitate de pe un alt domeniu, diferit de cel din care provine resursa.
   - Acesta asigură că doar domeniile autorizate pot accesa resursele serverului, prevenind astfel site-urile malițioase să facă solicitări neautorizate.
