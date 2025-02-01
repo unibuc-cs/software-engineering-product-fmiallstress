@@ -24,6 +24,20 @@ Fiecare membru al echipei a lucrat pe branch-ul sau. Dupa ce un membru isi termi
 - Performanta si frontend optimizate.
 - Functionalitatile esentiale au fost testate anterior manual in staging, pentru a asigura stabilitatea in productie.  
 
+## Fluxul de lucru CI/CD
+
+### Monitorizare continua a branch-ului `main`
+- Se verifica periodic daca exista modificari în `origin/main`.
+- Daca exista un commit nou, se execută `git pull` si se lanseaza procesul de redeploy.
+
+### Restart complet al aplicatiei la fiecare modificare
+- Se opresc containerele curente (`docker compose down -v`).
+- Se reconstruiesc si se repornesc containerele (`docker compose up --build -d`).
+
+### Procesul este gestionat printr-un script Bash
+- `watch-git-branch.sh` urmărește schimbările în repo.
+- `local-ci-cd.sh` gestionează procesul de redeploy.
+
 <br><br>
 
 **CONFIGURATIA DOCKER COMPOSE**  
@@ -113,3 +127,8 @@ Atat backend-ul aplicatiei, cat si baza de date MSSQL sunt configurate folosind 
   - Hash-ul parolelor 
   - Acces bazat pe roluri
   - Autentificări externe (de exemplu, Google, Facebook)
+
+  ### CORS (Cross-Origin Resource Sharing)
+
+  - CORS este o caracteristică de securitate implementată în browserele web pentru a controla modul în care resursele de pe un server web pot fi solicitate de pe un alt domeniu, diferit de cel din care provine resursa.
+  - Acesta asigură că doar domeniile autorizate pot accesa resursele serverului, prevenind astfel site-urile malițioase să facă solicitări neautorizate.
