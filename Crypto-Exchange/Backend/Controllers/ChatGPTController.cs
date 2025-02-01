@@ -1,9 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using OpenAI_API.Completions;
-using OpenAI_API;
 using test_binance_api.Service.CoinService;
 using System.Globalization;
-using OpenAI_API.Moderation;
+using OpenAI.Chat;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace test_binance_api.Controllers
@@ -30,21 +28,23 @@ namespace test_binance_api.Controllers
                 var apiKey = Configuration["ApiKeys:OpenAIKey"];
 
                 string answer = string.Empty;
+                ChatClient client = new(model: "gpt-4o", apiKey: apiKey);
+                // var openai = new OpenAIAPI(apiKey);
+                // CompletionRequest completion = new CompletionRequest
+                // {
+                //     Prompt = searchText,                                      // text to search
+                //     Model = OpenAI_API.Models.Model.ChatGPTTurboInstruct,     // model to ask
+                //     MaxTokens = maxTokens                                     // max tokens of a batch (depending on model)
+                // };
 
-                var openai = new OpenAIAPI(apiKey);
-                CompletionRequest completion = new CompletionRequest
-                {
-                    Prompt = searchText,                                      // text to search
-                    Model = OpenAI_API.Models.Model.ChatGPTTurboInstruct,     // model to ask
-                    MaxTokens = maxTokens                                     // max tokens of a batch (depending on model)
-                };
+                ChatCompletion result = client.CompleteChat(searchText);
 
                 // Search for result
-                var result = await openai.Completions.CreateCompletionsAsync(completion);
-                if (result.Completions.Count > 0)
+                // var result = await openai.Completions.CreateCompletionsAsync(completion);
+                if (result.Content[0].Text.Length > 0)
                 {
                     // Get the first completion's text
-                    answer = result.Completions[0].Text.Trim();
+                    answer = result.Content[0].Text.Trim();
                 }
 
                 return answer;

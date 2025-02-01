@@ -11,7 +11,20 @@
         <p class="mb-2"><strong>Balance:</strong> {{ formattedBalance }}</p>
         <p class="mb-2"><strong>Wallet Balance:</strong> {{ formattedWalletBalance }}</p>
         <p><strong>Money Invested:</strong> {{ formattedMoneyInvested }}</p>
-        <div class="flex flex-row items-center gap-4 p-2 w-80 rounded-lg bg-white shadow-md">
+        <div class="flex flex-row items-center gap-4 p-2 w-96 rounded-lg bg-white shadow-md mt-2">
+          <input 
+            type="number" 
+            v-model="amountMoneyToAdd" 
+            class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+            placeholder="Enter amount"
+          >
+          <button @click="addMoneyToBalance"
+            class="text-white bg-green-300 rounded-lg hover:bg-green-600 transition px-2 py-1">
+            Add money to balance
+          </button>
+        </div>
+
+        <div class="flex flex-row items-center gap-4 p-2 w-96 rounded-lg bg-white shadow-md mt-2">
           <input 
             type="number" 
             v-model="amountForTransition" 
@@ -20,7 +33,7 @@
           >
           <button @click="moneyUserWallet"
             class="text-white bg-green-300 rounded-lg hover:bg-green-600 transition px-2 py-1">
-            Add
+            Transfer to wallet
           </button>
         </div>
 
@@ -113,6 +126,19 @@ async function moneyUserWallet () {
       userData.value.walletBalance = userData.value.walletBalance + amountForTransition.value;
       userData.value.balance = userData.value.balance - amountForTransition.value;
 
+    }
+  } catch (error) {
+    console.error('Error adding money:', error.message);
+  }
+}
+
+
+const amountMoneyToAdd = ref(0)
+const addMoneyToBalance = async () => {
+  try {
+    const response = await axios.post(`${apiBaseUrl}/api/User/SetAmount/${userId.value}/${userData.value.balance + amountMoneyToAdd.value}`);
+    if (response.status === 200) {
+      userData.value.balance = userData.value.balance + amountMoneyToAdd.value;
     }
   } catch (error) {
     console.error('Error adding money:', error.message);
